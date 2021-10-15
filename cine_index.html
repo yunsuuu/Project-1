@@ -10,15 +10,17 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-- <script src="/js/jquery-desktop.min.js"></script> -->
 </head>
 
 <body>
 
-    <h1>나 이부분 추가했어</h1>
-    <!-- navbar -->
+    <!-- header -->
     <nav class="header">
         <div class="navbar1">
             <div class="logo">
@@ -34,12 +36,11 @@
                     onclick='javascript:AMPLITUDE.LogClickEvent(1,"click_com_searchbar","searchbar");'>검색</button>
             </div>
 
-
             <div class="utility-icon">
                 <ul class="li-inline-icon" style="margin: 0;">
-                    <li a href="#"><img src="images/info.png"></li>
-                    <li a href="#"><img src="images/user.png" style="margin: 0 15px;"></li>
-                    <li a href="#"><img src="images/heart1.png"></li>
+                    <li a href="#"><img src="/images/info.svg"></li>
+                    <li a href="#"><img src="/images/user.svg" style="margin: 0 15px;"></li>
+                    <li a href="#"><img src="/images/heart1.svg"></li>
                 </ul>
             </div>
         </div>
@@ -55,66 +56,93 @@
         </div>
     </nav>
 
-    <!-- 메인 비주얼 -->
-    <!-- Swiper -->
+
+    <!-- 섹션1 - 메인비주얼 -->
+    <section class=section1>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-
             <div class="swiper-slide">
-                <img src="images/main-img--1.png">
-                <div class="main-title-box">
-                    <h6 class="category">국내뉴스</h6>
-                    <h2 class="main-title">박찬욱 감독의<br>
-                        카메라에는<br>
-                        무엇이 담겼나</h2>
-                    <p class="sub-title">박찬욱 감독 첫 개인 사진전 <너의 표정>
-                    </p>
-                </div>
+                <a href="#"><img src="images/main-img-1.png">
+                    <div class="main-title-box">
+                        <h6 class="category">국내뉴스</h6>
+                        <h2 class="main-title">박찬욱 감독의<br>
+                            카메라에는<br>
+                            무엇이 담겼나</h2>
+                        <p class="sub-title">박찬욱 감독 첫 개인 사진전 <너의 표정>
+                        </p>
+                    </div>
+                </a>
             </div>
 
             <div class="swiper-slide">
-                <img src="images/main-img--2.png">
-                <div class="main-title-box">
-                    <h6 class="category">스페셜2</h6>
-                    <h2 class="main-title" style="font-size:40px;">서울대 학생들 인터뷰하며<br>
-                        상우의 마음 이해했죠</h2>
-                    <p class="sub-title">'오징어 게임' 상우 역 박해수
-                    </p>
-                </div>
+                <a href="#"><img src="images/main-img-2.png">
+                    <div class="main-title-box">
+                        <h6 class="category">스페셜2</h6>
+                        <h2 class="main-title" style="font-size:40px;">서울대 학생들 인터뷰하며<br>
+                            상우의 마음 이해했죠</h2>
+                        <p class="sub-title">'오징어 게임' 상우 역 박해수
+                        </p>
+                    </div>
+                </a>
             </div>
 
+            <!-- 타이틀 박스 위치 이동 -->
             <div class="swiper-slide">
-                <img src="images/main-img--3.png">
-                <div class="main-title-box-3">
-                    <h6 class="category">스페셜2</h6>
-                    <h2 class="main-title">착실히 쌓인 경험치로 더멀리</h2>
-                    <p class="sub-title">'기적' 배우 임윤아
-                    </p>
-                </div>
-            </div>
+                <a href="#"><img src="images/main-img-3.png">
+                    <div class="main-title-box">
+                        <h6 class="category">스페셜2</h6>
+                        <h2 class="main-title">착실히 쌓인 경험치로 더멀리</h2>
+                        <p class="sub-title">'기적' 배우 임윤아
+                        </p>
+                    </div>
+                </a>
+            </div>    
         </div>
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
     </div>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+        <!-- swiper icon -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <div class="swiper-pagination"></div>
+    </section>
+
+        <!-- 섹션2 - 매거진 -->
+        <section class="section2">
+            <h3>MAGAZINE</h3>
+            <ul class="magazine-li-inline">
+                <li><a class="menuLink2" href="#">전체</li></a>
+                <li><a class="menuLink2" href="#">뉴스</li></a>
+                <li><a class="menuLink2" href="#">리뷰</li></a>
+                <li><a class="menuLink2" href="#">기획</li></a>
+                <li><a class="menuLink2" href="#">평론</li></a>
+                <li><a class="menuLink2" href="#">인터뷰</li></a>
+            </ul>
+
+            <div></div>
+        </section>
+
+
+
+
+
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+
+                // navigation: {
+                //     nextEl: ".swiper-button-next",
+                //     prevEl: ".swiper-button-prev",
+                // },
+            });
+        </script>
 
 </body>
 
