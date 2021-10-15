@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cine21</title>
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="/js/jquery-desktop.min.js"></script> -->
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="header">
+        <div class="navbar1">
+            <div class="logo">
+                <h1>
+                    <a href="#"><img src="images/logo-dark_2x.png" alt="cine21"></a>
+                </h1>
+            </div>
+
+            <div class="top_search">
+                <input type="text" placeholder="2021년 상반기, 관객들이 가장 많이 본 영화 베스트 10은?" value="" data-link="/issue/16806"
+                    autocomplete="off">
+                <button type="submit" name="button" class="btn_search icon-search"
+                    onclick='javascript:AMPLITUDE.LogClickEvent(1,"click_com_searchbar","searchbar");'>검색</button>
+            </div>
+
+
+            <div class="utility-icon">
+                <ul class="li-inline-icon" style="margin: 0;">
+                    <li a href="#"><img src="images/info.png"></li>
+                    <li a href="#"><img src="images/user.png" style="margin: 0 15px;"></li>
+                    <li a href="#"><img src="images/heart1.png"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="navbar2">
+            <ul class="li-inline">
+                <li><a class="menuLink" href="#">매거진</a></li>
+                <li><a class="menuLink" href="#">정기구독</a></li>
+                <li><a class="menuLink" href="#">아카이브</a></li>
+                <li><a class="menuLink" href="#">이벤트</a></li>
+                <li><a class="menuLink" href="#">영화인 리쿠르트</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 비주얼 -->
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="images/main-img--1.png">
+                <div class="main-title-box">
+                    <h6 class="category">국내뉴스</h6>
+                    <h2 class="main-title">박찬욱 감독의<br>
+                        카메라에는<br>
+                        무엇이 담겼나</h2>
+                    <p class="sub-title">박찬욱 감독 첫 개인 사진전 <너의 표정>
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/main-img--2.png">
+                <div class="main-title-box">
+                    <h6 class="category">스페셜2</h6>
+                    <h2 class="main-title" style="font-size:40px;">서울대 학생들 인터뷰하며<br>
+                        상우의 마음 이해했죠</h2>
+                    <p class="sub-title">'오징어 게임' 상우 역 박해수
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="images/main-img--3.png">
+                <div class="main-title-box-3">
+                    <h6 class="category">스페셜2</h6>
+                    <h2 class="main-title">착실히 쌓인 경험치로 더멀리</h2>
+                    <p class="sub-title">'기적' 배우 임윤아
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+
+</html>
