@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cine21 copy</title>
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- <script src="/js/jquery-desktop.min.js"></script> -->
+
+    <!-- section1 -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick/slick-theme.css" />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./css/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".gallery").slick({
+                arrows: false,
+                dots: true,
+                infinite: true,
+                speed: 300,
+            });
+        });
+    </script>
+</head>
+
+
+
+<body>
+    <!-- header -->
+    <nav class="header">
+        <div id="navbar1">
+            <div id="mobileMenu" class="mobile_inlineBlock">
+                <h1><a href="#">
+                    <span class="blind">메뉴</span>
+                </a></h1>
+            </div>
+
+            <div id="logo">
+                <h1><a href="#"><span class="blind">씨네21</span>
+                </a></h1>
+            </div>
+            
+            <!-- <div id="top_search">
+                <input type="text" placeholder="2021년 상반기, 관객들이 가장 많이 본 영화 베스트 10은?" value="" data-link="/issue/16806"
+                    autocomplete="off" class="desktop_inlineBlock">
+                <button type="submit" name="button" class="btn_search icon-search"
+                    onclick='javascript:AMPLITUDE.LogClickEvent(1,"click_com_searchbar","searchbar");'>검색</button>
+            </div>> -->
+
+            <div>
+                
+            </div>
+
+            <div class="utility-icon">
+                <ul class="li-inline-icon">
+                    <li class="desktop_inlineBlock"><a href="#">
+                            <img src="images/info.svg" alt="회사소개">
+                        </a>
+                    </li>
+                    <li class="desktop_inlineBlock"><a href="#">
+                            <img src="/images/user.svg" alt="로그인" style="margin: 0 15px;">
+                        </a>
+                    </li>
+                    <li><a href="#">
+                        <img src="/images/heart1.svg" alt="하트">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="navbar2" class="desktop_inlineBlock">
+            <ul class="li-inline">
+                <li><a class="menuLink" href="#">매거진</a></li>
+                <li><a class="menuLink" href="#">정기구독</a></li>
+                <li><a class="menuLink" href="#">아카이브</a></li>
+                <li><a class="menuLink" href="#">이벤트</a></li>
+                <li><a class="menuLink" href="#">영화인 리쿠르트</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- section1 - main -->
+    <section class="gallery">
+        <div class="item">
+            <a href="#"><img src="/images/main-img-1.png" alt="그림설명">
+                <div class="textSet">
+                    <h6 class="category">국내뉴스</h6>
+                    <h2 class="mainTitle">
+                        박찬욱 감독의<br>
+                        카메라에는<br>
+                        무엇이 담겼나</h2>
+                    <p class="subTitle">박찬욱 감독 첫 개인 사진전 <너의 표정>
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="/images/main-img-2.png" alt="그림설명">
+                <div class="textSet">
+                    <h6 class="category">스페셜2</h6>
+                    <h2 class="mainTitle" style="font-size: 45px;">
+                        서울대 학생들 인터뷰하며<br>
+                        상우의 마음 이해했죠</h2>
+                    <p class="subTitle">'오징어 게임' 상우 역 박해수</p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="/images/main-img-3.png" alt="그림설명">
+                <div class="textSet" style="margin-left: -20%;">
+                    <h6 class="category">스페셜2</h6>
+                    <h2 class="mainTitle">착실히 쌓인 경험치로 더멀리</h2>
+                    <p class="subTitle">'기적' 배우 임윤아</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- section2 - magazine -->
+    <section class="section2">
+        <h3>MAGAZINE</h3>
+        <ul class="magazine-li-inline">
+            <li><a class="menuLink2" href="#">전체</li></a>
+            <li><a class="menuLink2" href="#">뉴스</li></a>
+            <li><a class="menuLink2" href="#">리뷰</li></a>
+            <li><a class="menuLink2" href="#">기획</li></a>
+            <li><a class="menuLink2" href="#">평론</li></a>
+            <li><a class="menuLink2" href="#">인터뷰</li></a>
+        </ul>
+
+        <!--content -->
+        <div class="magazineContent">
+            
+        </div>
+</body>
+
+
+
+</html>

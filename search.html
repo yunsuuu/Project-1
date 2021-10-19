@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #myInput {
+            position: relative;
+            background-image: url(/images/search-bold.svg);
+            background-size: 22px;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 450px;
+            font-size: 15px;
+            padding: 12px 20px 12px 50px;
+            border: 1px solid transparent;
+            border-bottom: 2px solid #000;
+            margin-bottom: 12px;
+        }
+
+        .btn_close {
+        position: absolute;
+        margin-left: -25px;
+        margin-top: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myUL li a {
+            margin-top: -1px;
+            padding: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            color: black;
+            display: block;
+        }
+
+        #myUL li a:hover:not(.header) {
+            color: #dd0606;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="검색어를 입력하세요." title="Type in a name">
+        <span class="btn_close">
+            <img src="images/exit.svg" alt="창닫기">
+        </span>
+    </div>
+
+
+    <ul id="myUL">
+        <h3>실시간 인기 검색어</h3>
+        <li><a href="#">드라마 <홈타운></a></li>
+        <li><a href="#">스튜디오 드래곤</a></li>
+        <li><a href="#">베놈2: 렛 데어 비 카니지</a></li>
+        <li><a href="#">비광</a></li>
+        <li><a href="#">홍원찬 감독</a></li>
+        <li><a href="#">칸영화제 개막작</a></li>
+        <li><a href="#">레오 까락스 감독</a></li>
+        <li><a href="#">아네트 티저 포스터 공개</a></li>
+        <li><a href="#">김혜수x염정아의 범죄 활극</a></li>
+        <li><a href="#">스틸워터</a></li>
+    </ul>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

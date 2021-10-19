@@ -1,4 +1,4 @@
-/* 초기화 코드 */
+/* 공통 */
 body, h1, h2, h3, h6, p, ul, li {
     margin: 0;
     padding: 0;
@@ -6,6 +6,14 @@ body, h1, h2, h3, h6, p, ul, li {
 
 body {
     font-family: 'notosanskr';
+}
+
+.desktop_inlineBlock {
+    display: none !important;
+}
+
+.blind {
+    display: none;
 }
 
 /* 섹션별 제목 */
@@ -16,39 +24,44 @@ h3 {
     font-family: 'Montserrat';
 }
 
-/* 헤더 */
-.navbar1 {
+/* nav1 */
+#navbar1 {
     /* border: 3px solid red; */
-    position: relative;
-    width: 100%;
+    width: 80%;
     height: 70px;
+    display: flex;
+    justify-content: space-between;
     margin: auto;
     background-color: #fff;
+    align-items: center;
 }
 
-.logo img {
-    /* border: 3px solid blue; */
-    position: absolute;
+#mobileMenu a {
+    display: block;
     width: 90px;
-    top: 26px;
-    left: 140px;
+    height: 30px;
+    background-image: url("../images/mobile_sidebar.svg");
+    background-size: contain;
+    /* 백그라운드 사이즈가 잘리지 않고 다 보이게 */
+    background-repeat: no-repeat;
+}
+#logo a {
+    display: block;
+    width: 90px;
+    height: 30px;
+    background-image: url("../images/logo_black.svg");
+    background-size: contain;
+    /* 백그라운드 사이즈가 잘리지 않고 다 보이게 */
+    background-repeat: no-repeat;
 }
 
 /* 검색창 */
-.top_search {
-    /* border: 3px solid blue; */
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    /* display: inline-block; */
-    /* width: 450px; */
+#top_search {
     height: 32px;
     border-bottom: 2px solid #000;
 }
-
-.top_search input {
-    width: 450px;
+#top_search input {
+    width: 420px;
     /* height: 18px; */
     /* display: block; */
     /* float: left; */
@@ -61,18 +74,12 @@ h3 {
     outline: none;
     background-color: transparent;
 }
-
 ::placeholder {
     color: #000;
 }
 
-.top_search .btn_search {
+#top_search .btn_search {
     /* border: 3px solid blue; */
-    /* display: block; */
-    /* float: left; */
-    /* width: 8px; */
-    /* height: 28px; */
-    /* overflow: hidden; */
     padding: 10px;
     text-indent: -9999px;
     background-color: transparent;
@@ -81,29 +88,17 @@ h3 {
     border: none;
 }
 
-.top_search .icon-search {
+#top_search .icon-search {
     /* border: 3px solid red; */
     background-image: url(/images/search-bold.svg);
-    /* float: right; */
     background-size: 18px;
     margin-right: 5px;
     cursor: pointer;
 }
 
-
 /* utility icon */
-.li-inline-icon {
-    /* border: 3px solid black; */
-    /* margin-top: 33px; */
-    float: left;
-    position: absolute;
-    top: 30px;
-    right: 140px;
-}
-
 .utility-icon li {
     /* border: 3px solid blueviolet; */
-    /* list-style: none; */
     display: inline-block;
 }
 
@@ -112,43 +107,33 @@ h3 {
     width: 22px;
 }
 
-/* 헤더2 */
+/* nav2 */
 .navbar2 {
-    /* border: 3px solid blue; */
+    /* border: 3px solid red; */
     width: 100%;
-    height: 60px;
+    height: 50px;
     margin: auto;
-    position: relative;
-    background-color: #000;
+    background-color:#000;
 }
-
 .li-inline {
-    border: 1px solid orange;
-    display: inline-block;
-    margin: auto;
-    width: 1200px;
-    /* height: 40px; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* border: 3px solid green; */
+    display: flex;
+    width: 60%;
+    height: 50px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
 }
-
 .li-inline li {
-    border: 1px solid blue;
+    /* border: 3px solid blue; */
     list-style: none;
-    margin: 0 30px;
-    float: left;
-    width: 150px;
-    text-align: center;
-    line-height: 30px;
-    vertical-align: middle;
+    /* text-align: center; */
+    /* line-height: 30px; */
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'notosanskr';
     color: white;
 }
-
 .menuLink {
     /* border: 3px solid green; */
     text-decoration: none;
@@ -163,15 +148,19 @@ h3 {
     color: #dd0606;
 }
 
-
 /* 섹션1 - 메인비주얼 */
-.swiper-slide img {
-    /* border: 3px solid blue; */
+.gallery {
     width: 100%;
-    height: 100%;
 }
 
-.main-title-box {
+.gallery .item {
+    /* border: 3px solid blue; */
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.textSet {
     /* border: 3px solid orange; */
     position: absolute;
     top: 50%;
@@ -180,7 +169,7 @@ h3 {
     color: #000;
 }
 
-.swiper-slide .category {
+.textSet .category {
     width: 90px;
     height: 30px;
     line-height: 32px;
@@ -194,16 +183,21 @@ h3 {
     border-radius: 4px;
 }
 
-.swiper-slide .main-title {
+.textSet .mainTitle {
         font-size: 60px;
         margin: 10px 0;
 }
 
-.swiper-slide .sub-title {
-    font-size: 24px;
+.textSet .subTitle {
+    /* border: 3px solid red; */
+    font-size: 20px;
     font-weight: 500;
-    margin-top: 16px;
-    text-indent: 10px;
+    margin-top: 14px;
+    text-indent: 10px;   
+}
+
+.gallery .item .textSet a:hover {
+    background-color: black;
 }
 
 
@@ -217,7 +211,6 @@ h3 {
     transform: translate(-50%, -50%);
     margin-top: 50px;
 }
-
 .magazine-li-inline li {
     /* border: 3px solid blue; */
     width: 150px;
@@ -231,11 +224,91 @@ h3 {
 .menuLink2 {
     /* border: 3px solid red; */
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    color:#9B9B9B;
+    color:#000;
 }
-
 .menuLink2:hover {
     color: #dd0606;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ 아이폰 + 아이패드 + 데스크탑 ------------ */
+/* 1440 이후부터 햄버거바 보이게 */
+
+/* 375 iPhone 6/7/8 */
+@media screen and (min-width: 375px) {
+    #navbar1 {
+        border: 1px solid blue;
+        width: 90%;
+        height: 50px;
+        display: flex;
+        /* justify-content: space-between; */
+        margin: auto;
+        background-color: #fff;
+        align-items: center;
+    }
+    #mobileMenu a {
+        border: 1px solid green;
+        display: block;
+        width: 30px;
+        height: 20px;
+        background-image: url("../images/mobile-sidebar.svg");
+        background-size: contain;
+        /* 백그라운드 사이즈가 잘리지 않고 다 보이게 */
+        background-repeat: no-repeat;
+    }
+    #logo a {
+        border: 1px solid red;
+        display: block;
+        width: 70px;
+        height: 25px;
+        background-image: url("../images/logo_black.svg");
+        background-size: contain;
+        /* 백그라운드 사이즈가 잘리지 않고 다 보이게 */
+        background-repeat: no-repeat;
+    }
+
+    #top_search .btn-search {
+       border: 1px solid orange;
+       /* background-color: #fff; */
+    }
+}
+
+/* 414 iPhone 6/7/8 Plus */
+@media screen and (min-width: 414px) {
+
+}
+
+
+
+ /* 768 - 아이패드 */
+ @media screen and (min-width: 768px) {
+    
+}
+
+
+/* 1024 */
+@media screen and (min-width: 1024px) {
+    .desktop_inlineBlock {
+        display: inline-block !important;
+    }
+
+    .mobile_inlineBlock {
+        display: none !important;
+    }
 }
