@@ -1,22 +1,19 @@
-/* 공통 */
+/* all */
 body, h1, h2, h3, h6, p, ul, li {
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: 'notosanskr';
 }
-
 .desktop_inlineBlock {
     display: none !important;
 }
-
 .blind {
     display: none;
 }
 
-/* 섹션별 제목 */
+/* all section title */
 h3 {
     font-size: 50px;
     text-align: center;
@@ -24,30 +21,29 @@ h3 {
     font-family: 'Montserrat';
 }
 
-/* nav1 */
+/* header */
 #navbar1 {
     /* border: 3px solid red; */
-    width: 80%;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
+    width: 90%;
+    height: 60px;
     margin: auto;
+    display: flex;
+    margin-top: 8px;
     background-color: #fff;
     align-items: center;
+    justify-content: space-between;
 }
-
-#mobileMenu a {
+#mobileMenu h1 {
     display: block;
-    width: 90px;
-    height: 30px;
-    background-image: url("../images/mobile_sidebar.svg");
+    width: 30px;
+    height: 20px;
+    background-image: url("../images/mobile-sidebar.svg");
     background-size: contain;
-    /* 백그라운드 사이즈가 잘리지 않고 다 보이게 */
     background-repeat: no-repeat;
 }
-#logo a {
+#logo h1 {
     display: block;
-    width: 90px;
+    width: 80px;
     height: 30px;
     background-image: url("../images/logo_black.svg");
     background-size: contain;
@@ -55,60 +51,55 @@ h3 {
     background-repeat: no-repeat;
 }
 
-/* 검색창 */
-#top_search {
-    height: 32px;
+/* search filter design */
+#search-wrap {
+    /* border: 3px solid reds; */
+    width: 430px;
     border-bottom: 2px solid #000;
+    margin-bottom: 6px;
 }
-#top_search input {
-    width: 420px;
-    /* height: 18px; */
-    /* display: block; */
-    /* float: left; */
+.search-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search-content input {
+    width: 90%;
+    font-size: 15px;
+    padding: 4px;
     border: none;
-    line-height: 33px;
-    text-indent: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 0;
-    outline: none;
-    background-color: transparent;
+    /* text-indent: 5px; - 들여쓰기 */
 }
-::placeholder {
+.search-content button {
+    /* border: 3px solid red; */
+    padding: 12px;
+    margin-bottom: 4px;
+    background-position: center;
+    background-color: transparent;
+    background-image: url(../images/search-bold.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.search-content input:focus {
+    outline: none;
+}
+.search-content ::placeholder {
     color: #000;
 }
 
-#top_search .btn_search {
-    /* border: 3px solid blue; */
-    padding: 10px;
-    text-indent: -9999px;
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-}
-
-#top_search .icon-search {
-    /* border: 3px solid red; */
-    background-image: url(/images/search-bold.svg);
-    background-size: 18px;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
 /* utility icon */
-.utility-icon li {
+#utility-icon li {
     /* border: 3px solid blueviolet; */
     display: inline-block;
 }
-
 .li-inline-icon img {
     /* border: 3px solid green; */
-    width: 22px;
+    width: 20px;
 }
 
-/* nav2 */
-.navbar2 {
+#navbar2 {
     /* border: 3px solid red; */
     width: 100%;
     height: 50px;
@@ -127,8 +118,6 @@ h3 {
 .li-inline li {
     /* border: 3px solid blue; */
     list-style: none;
-    /* text-align: center; */
-    /* line-height: 30px; */
     font-weight: 600;
     font-size: 18px;
     font-family: 'notosanskr';
@@ -138,19 +127,19 @@ h3 {
     /* border: 3px solid green; */
     text-decoration: none;
 }
-
-/* 메뉴 클릭시 보라색으로 변하는 거 방지 */
+/* 메뉴 하이퍼링크 초기화 */
 .menuLink:visited {
     color: #fff;
 }
-
 .menuLink:hover {
     color: #dd0606;
 }
 
-/* 섹션1 - 메인비주얼 */
+/* section1 - main visual */
 .gallery {
+    /* border: 3px solid blue; */
     width: 100%;
+    display: block;
 }
 
 .gallery .item {
@@ -184,8 +173,8 @@ h3 {
 }
 
 .textSet .mainTitle {
-        font-size: 60px;
-        margin: 10px 0;
+    font-size: 60px;
+    margin: 10px 0;
 }
 
 .textSet .subTitle {
@@ -201,7 +190,7 @@ h3 {
 }
 
 
-/* 섹션2 - 매거진 */
+/* section2 - magazine */
 .magazine-li-inline {
     /* border: 3px solid red; */
     display: inline-block;
@@ -248,67 +237,44 @@ h3 {
 
 
 /* ------------ 아이폰 + 아이패드 + 데스크탑 ------------ */
-/* 1440 이후부터 햄버거바 보이게 */
 
-/* 375 iPhone 6/7/8 */
-@media screen and (min-width: 375px) {
-    #navbar1 {
-        border: 1px solid blue;
-        width: 90%;
-        height: 50px;
-        display: flex;
-        /* justify-content: space-between; */
-        margin: auto;
-        background-color: #fff;
-        align-items: center;
-    }
-    #mobileMenu a {
-        border: 1px solid green;
-        display: block;
-        width: 30px;
-        height: 20px;
-        background-image: url("../images/mobile-sidebar.svg");
-        background-size: contain;
-        /* 백그라운드 사이즈가 잘리지 않고 다 보이게 */
-        background-repeat: no-repeat;
-    }
-    #logo a {
-        border: 1px solid red;
-        display: block;
-        width: 70px;
-        height: 25px;
-        background-image: url("../images/logo_black.svg");
-        background-size: contain;
-        /* 백그라운드 사이즈가 잘리지 않고 다 보이게 */
-        background-repeat: no-repeat;
+    /* 375 iPhone 6/7/8 */
+    @media screen and (min-width: 375px) {
+        
     }
 
-    #top_search .btn-search {
-       border: 1px solid orange;
-       /* background-color: #fff; */
-    }
-}
+    /* 414 iPhone 6/7/8 Plus */
+    @media screen and (min-width: 414px) {
 
-/* 414 iPhone 6/7/8 Plus */
-@media screen and (min-width: 414px) {
-
-}
-
-
-
- /* 768 - 아이패드 */
- @media screen and (min-width: 768px) {
-    
-}
-
-
-/* 1024 */
-@media screen and (min-width: 1024px) {
-    .desktop_inlineBlock {
-        display: inline-block !important;
     }
 
-    .mobile_inlineBlock {
-        display: none !important;
+    /* 768 - 아이패드 */
+    @media screen and (min-width: 768px) {
+        #logo h1 {
+            width: 100px;
+            height: 35px;
+            margin: 0;
+        }
+        .li-inline-icon img {
+            width: 24px;
+        }
+        #mobileMenu h1 {
+            width: 40px;
+            height: 25px;
+        }
     }
-}
+
+    /* 1024 - 아이패드pro - 1024부터 데스크탑ver*/
+    @media screen and (min-width: 1024px) {
+        .desktop_inlineBlock {
+            display: inline-block !important;
+        }
+        .mobile_inlineBlock {
+            display: none;
+        } 
+    }
+
+    /* 1440 - 태블릿 가로ver(데스크탑이랑 동일)*/
+    @media screen and (min-width: 1440px) {
+
+    }
