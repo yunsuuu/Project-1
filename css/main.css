@@ -45,6 +45,7 @@ h3 {
     display: block;
     width: 80px;
     height: 30px;
+    margin-left: 20px;
     background-image: url("../images/logo_black.svg");
     background-size: contain;
     /* 백그라운드 사이즈가 잘리지 않고 다 보이게 */
@@ -90,7 +91,11 @@ h3 {
 }
 
 /* utility icon */
-#utility-icon li {
+.li-inline-icon {
+    padding: 0;
+    margin: 0;
+}
+.li-inline-icon li {
     /* border: 3px solid blueviolet; */
     display: inline-block;
 }
@@ -139,31 +144,29 @@ h3 {
 .gallery {
     /* border: 3px solid blue; */
     width: 100%;
-    display: block;
 }
-
 .gallery .item {
     /* border: 3px solid blue; */
     max-height: 100vh;
     overflow: hidden;
     position: relative;
 }
-
-.textSet {
-    /* border: 3px solid orange; */
+.gallery .item img {
+    width: 100%;
+}
+.gallery .item .textSet {
+    border: 3px solid orange;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    top: 200px;
+    /* left: 0; */
+    text-align: center;
     color: #000;
 }
-
-.textSet .category {
-    width: 90px;
-    height: 30px;
-    line-height: 32px;
-    /* 중간정렬 */
-    margin: 0;
+.gallery .item .textSet .category {
+    width: fit-content;
+    padding: 5px 8px;
+    margin: 0 auto;
     font-size: 18px;
     font-weight: 600;
     text-align: center;
@@ -171,20 +174,15 @@ h3 {
     color: white;
     border-radius: 4px;
 }
-
 .textSet .mainTitle {
     font-size: 60px;
-    margin: 10px 0;
+    padding: 10px 0;
 }
-
 .textSet .subTitle {
     /* border: 3px solid red; */
     font-size: 20px;
     font-weight: 500;
-    margin-top: 14px;
-    text-indent: 10px;   
 }
-
 .gallery .item .textSet a:hover {
     background-color: black;
 }
@@ -253,14 +251,9 @@ h3 {
         #logo h1 {
             width: 100px;
             height: 35px;
-            margin: 0;
         }
         .li-inline-icon img {
             width: 24px;
-        }
-        #mobileMenu h1 {
-            width: 40px;
-            height: 25px;
         }
     }
 
