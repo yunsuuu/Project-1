@@ -98,17 +98,6 @@
     background-size: contain;
 }
 
-#peopleGallery .slick-prev {
-    border: 3px solid red;
-    left: -120px;
-    margin-top: 0px;
-}
-#peopleGallery .slick-next {
-    border: 3px solid red;
-    right: -120px;
-    margin-top: -50px;
-}
-
 .slick-prev
 {
     left: 20px;
@@ -237,7 +226,7 @@
     {
         /* border: 3px solid blue; */
         position: absolute;
-        bottom: 30px;
+        bottom: 5%;
         display: block;
         width: 100%;
         padding: 0;

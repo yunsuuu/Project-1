@@ -43,28 +43,18 @@
 <link rel="stylesheet" type="text/css" href="./css/slick/slick.css" />
 <link rel="stylesheet" type="text/css" href="./css/slick/slick-theme.css" />
 
-<!-- JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script type="text/javascript" src="./css/slick/slick.min.js"></script>
 
-<script>
-    $(document).ready(function () {
-        $(".container").slick({
-            arrows: false,
-            dots: true,
-            infinite: true,
-            speed: 300,
-            });
-        });
-</script>
 </head>
 
 <body>
 <!-- header -->
 <header>
     <nav id="navbar1">
-        <h1 id="mobileSidebar" class="mobile_inlineBlock"><a href="#"><span class="blind">모바일용사이드바</span></a></h1>
-        <h2 id="logo"><a href="#"><span class="blind">씨네21</span></a>
+        <h1 id="mobileSidebar" class="mobile_inlineBlock">
+            <a href="#"><span class="blind">모바일용사이드바</span></a>
+        </h1>
+        <h2 id="logo">
+            <a href="#"><span class="blind">씨네21</span></a>
         </h2>
 
         <div id="search-wrap" class="desktop_inlineBlock">
@@ -111,21 +101,23 @@
 </header>
 
 <!-- section1 - main visual -->
-<section class="mainVisual" style="overflow: hidden;">
+<!-- 이미지 높이 고정 -->
+<section class="mainVisual">
     <div class="container">
         <div class="item">
             <a href="#">
-            <img src="./images/desktopMainImg-1@2x.png" alt="메인기사" class="desktop_inlineBlock">
             <img src="./images/mobileMainImg-1@2x.png" alt="메인기사" class="mobile_inlineBlock">
+            <img src="./images/desktopMainImg-1@2x.png" alt="메인기사" class="desktop_inlineBlock">
             <div class="textSet">
                 <h5 class="category">국내뉴스</h5>
                 <h4 class="mainTitle">
                     박찬욱 감독의 카메라에는 무엇이 담겼나</h4>
-                <p class="subTitle">박찬욱 감독 첫 개인 사진전 <너의 표정>
+                <p class="subTitle">박찬욱 감독 첫 개인 사진전 '너의 표정'
                 </p>
             </div>
             </a>
         </div>
+
         <div class="item">
             <a href="#">
             <img src="./images/mobileMainImg-2@2x.png" alt="메인기사" class="mobile_inlineBlock">
@@ -139,6 +131,7 @@
             </a>
         </div>
     
+        <!-- textset 위치 조정 -->
         <div class="item">
             <a href="#">
             <img src="./images/mobileMainImg-3@2x.png" alt="메인기사" class="mobile_inlineBlock">
@@ -158,7 +151,7 @@
     <h3>MAGAZINE</h3>
     <nav id="magazine-gnb">
         <ul class="magazine-li-inline">
-            <li><a class="menuLink2" href="#">전체</a></li>
+            <li><a class="menuLink2" href="#" style="color: #dd0606;">전체</a></li>
             <li><a class="menuLink2" href="#">뉴스</a></li>
             <li><a class="menuLink2" href="#">리뷰</a></li>
             <li><a class="menuLink2" href="#">기획</a></li>
@@ -167,10 +160,61 @@
         </ul>
     </nav>
 
-    <!--content -->
+<!-- magazine content -->
+<div class="magazineSlider">
     <div class="magazineContent">
-
+        <a href="#"><img src="./images/magazine-img-4@2x.png" alt="매거진 기사">
+        <div class="textSet">
+        <h5 class="category">커버스타</h5>
+        <h4 class="magazineTilte">'최선의 삶' 방민아, 두려움을 내려놓고</h4>
+        <p class="magazineDate">2021-09-01 · 남선우 기자</p>
+        </a>
+        </div>
     </div>
+    <div class="magazineContent">
+        <a href="#"><img src="./images/magazine-img-1@2x.png" alt="매거진 기사">
+        <div class="textSet">
+        <h5 class="category">커버스타</h5>
+        <h4 class="magazineTilte">이것이 우리의 최선</h4>
+        <p class="magazineDate">2021-09-01 · 씨네21 취재팀</p>
+        </a>
+        </div>
+    </div>
+    <div class="magazineContent">
+        <a href="#"><img src="./images/magazine-img-2@2x.png" alt="매거진 기사">
+        <div class="textSet">
+        <h5 class="category">커버스타</h5>
+        <h4 class="magazineTilte">'최선의 삶' 심달기, 솔직한 욕망을 찾아서</h4>
+        <p class="magazineDate">2021-09-01 · 송경원 기자</p>
+        </a>
+        </div>
+    </div>
+    <div class="magazineContent">
+        <a href="#"><img src="./images/magazine-img-3@2x.png" alt="매거진 기사">
+        <div class="textSet">
+        <h5 class="category">커버스타</h5>
+        <h4 class="magazineTilte">'최선의 삶' 한성민…‘나는 강하다’는 주문</h4>
+        <p class="magazineDate">2021-09-01 · 조현나 기자</p>
+        </a>
+        </div>
+    </div>
+</div>
+    
+<!-- JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="./css/slick/slick.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".container").slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            });
+        });
+</script>
+
 </body>
 
 
