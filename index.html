@@ -60,7 +60,9 @@
         <div id="search-wrap" class="desktop_inlineBlock">
             <div class="search-content">
                 <input type="text" placeholder="2021년 상반기, 관객들이 가장 많이 본 영화 베스트 10은?" name="search">
-                <button type="submit"><span class="blind">검색</span></button>
+                <button type="submit">
+                    <span class="blind">검색</span>
+                </button>
             </div>
         </div>
 
@@ -71,7 +73,7 @@
                     </a>
                 </li>
                 <li><a href="#">
-                        <img src="./images/search-bold.svg" alt="검색" class="mobile_inlineBlock">
+                        <img src="./images/search.svg" alt="검색" class="mobile_inlineBlock">
                     </a>
                 </li>
                 
@@ -81,7 +83,7 @@
                     </a>
                 </li>
                 <li><a href="#">
-                        <img src="./images/heart-bold.svg" alt="하트">
+                        <img src="./images/heart.svg" alt="하트">
                     </a>
                 </li>
             </ul>
@@ -90,18 +92,28 @@
 
     <nav id="navbar2" class="desktop_inlineBlock">
         <ul class="li-inline">
-            <li><a class="menuLink" href="#">매거진</a></li>
-            <li><a class="menuLink" href="#">정기구독</a></li>
-            <li><a class="menuLink" href="#">아카이브</a></li>
-            <li><a class="menuLink" href="#">이벤트</a></li>
-            <li><a class="menuLink" href="#">영화인 리쿠르트</a></li>
+            <li>
+                <a class="menuLink" href="#">매거진</a>
+            </li>
+            <li>
+                <a class="menuLink" href="#">정기구독</a>
+            </li>
+            <li>
+                <a class="menuLink" href="#">아카이브</a>
+            </li>
+            <li>
+                <a class="menuLink" href="#">이벤트</a>
+            </li>
+            <li>
+                <a class="menuLink" href="#">영화인 리쿠르트</a>
+            </li>
         </ul>
     </nav>
     </div>
 </header>
 
 <!-- section1 - main visual -->
-<!-- 이미지 높이 고정 -->
+<!-- 이미지 높이 고정 - 태블릿용 이미지 만들기? -->
 <section class="mainVisual">
     <div class="container">
         <div class="item">
@@ -117,7 +129,6 @@
             </div>
             </a>
         </div>
-
         <div class="item">
             <a href="#">
             <img src="./images/mobileMainImg-2@2x.png" alt="메인기사" class="mobile_inlineBlock">
@@ -130,8 +141,6 @@
             </div>
             </a>
         </div>
-    
-        <!-- textset 위치 조정 -->
         <div class="item">
             <a href="#">
             <img src="./images/mobileMainImg-3@2x.png" alt="메인기사" class="mobile_inlineBlock">
@@ -146,63 +155,77 @@
     </div>
 </section>
 
-<!-- section2 - magazine -->
+<!-- section2 start- magazine -->
 <section class="magazine">
     <h3>MAGAZINE</h3>
     <nav id="magazine-gnb">
         <ul class="magazine-li-inline">
-            <li><a class="menuLink2" href="#" style="color: #dd0606;">전체</a></li>
-            <li><a class="menuLink2" href="#">뉴스</a></li>
-            <li><a class="menuLink2" href="#">리뷰</a></li>
-            <li><a class="menuLink2" href="#">기획</a></li>
-            <li><a class="menuLink2" href="#">평론</a></li>
-            <li><a class="menuLink2" href="#">인터뷰</a></li>
+            <li>
+                <a class="menuLink2" href="#" style="color: #dd0606;">전체</a>
+            </li>
+            <li>
+                <a class="menuLink2" href="#">뉴스</a>
+            </li>
+            <li>
+                <a class="menuLink2" href="#">리뷰</a>
+            </li>
+            <li>
+                <a class="menuLink2" href="#">기획</a>
+            </li>
+            <li>
+                <a class="menuLink2" href="#">평론</a>
+            </li>
+            <li>
+                <a class="menuLink2" href="#">인터뷰</a>
+            </li>
         </ul>
     </nav>
 
 <!-- magazine content -->
-<div class="magazineSlider">
+<section class="magazine slider">
     <div class="magazineContent">
-        <a href="#"><img src="./images/magazine-img-4@2x.png" alt="매거진 기사">
-        <div class="textSet">
-        <h5 class="category">커버스타</h5>
-        <h4 class="magazineTilte">'최선의 삶' 방민아, 두려움을 내려놓고</h4>
-        <p class="magazineDate">2021-09-01 · 남선우 기자</p>
-        </a>
-        </div>
-    </div>
-    <div class="magazineContent">
-        <a href="#"><img src="./images/magazine-img-1@2x.png" alt="매거진 기사">
-        <div class="textSet">
-        <h5 class="category">커버스타</h5>
-        <h4 class="magazineTilte">이것이 우리의 최선</h4>
-        <p class="magazineDate">2021-09-01 · 씨네21 취재팀</p>
-        </a>
-        </div>
-    </div>
-    <div class="magazineContent">
-        <a href="#"><img src="./images/magazine-img-2@2x.png" alt="매거진 기사">
-        <div class="textSet">
-        <h5 class="category">커버스타</h5>
-        <h4 class="magazineTilte">'최선의 삶' 심달기, 솔직한 욕망을 찾아서</h4>
-        <p class="magazineDate">2021-09-01 · 송경원 기자</p>
-        </a>
-        </div>
-    </div>
-    <div class="magazineContent">
-        <a href="#"><img src="./images/magazine-img-3@2x.png" alt="매거진 기사">
-        <div class="textSet">
-        <h5 class="category">커버스타</h5>
-        <h4 class="magazineTilte">'최선의 삶' 한성민…‘나는 강하다’는 주문</h4>
-        <p class="magazineDate">2021-09-01 · 조현나 기자</p>
-        </a>
-        </div>
-    </div>
-</div>
+      <a href="#">
+          <img src="./images/magazine-img-4@2x.png" alt="매거진 기사">
+      </a>
+      <div class="textSet">
+      <h5 class="category">커버스타</h5>
+      <h4 class="magazineTilte">'최선의 삶' 방민아, 두려움을 내려놓고</h4>
+      <p class="magazineDate">2021-09-01 · 남선우 기자</p>
+      </div>
+  </div>
+  <div class="magazineContent">
+      <a href="#"><img src="./images/magazine-img-1@2x.png" alt="매거진 기사">
+      </a>
+      <div class="textSet">
+      <h5 class="category">커버스타</h5>
+      <h4 class="magazineTilte">이것이 우리의 최선</h4>
+      <p class="magazineDate">2021-09-01 · 씨네21 취재팀</p>
+      </div>
+  </div>
+  <div class="magazineContent">
+      <a href="#"><img src="./images/magazine-img-2@2x.png" alt="매거진 기사">
+      </a>
+      <div class="textSet">
+      <h5 class="category">커버스타</h5>
+      <h4 class="magazineTilte">'최선의 삶' 심달기, 솔직한 욕망을 찾아서</h4>
+      <p class="magazineDate">2021-09-01 · 송경원 기자</p>
+      </div>
+  </div>
+  <div class="magazineContent">
+      <a href="#"><img src="./images/magazine-img-3@2x.png" alt="매거진 기사">
+      </a>
+      <div class="textSet">
+      <h5 class="category">커버스타</h5>
+      <h4 class="magazineTilte">'최선의 삶' 한성민…‘나는 강하다’는 주문</h4>
+      <p class="magazineDate">2021-09-01 · 조현나 기자</p>
+      </div>
+  </div>
+  </section>
     
 <!-- JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script type="text/javascript" src="./css/slick/slick.min.js"></script>
+<script type="text/javascript" src="./js/slick.min.js"></script>
+<script type="text/javascript" src="./js/slick.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -213,6 +236,18 @@
             speed: 300,
             });
         });
+</script>
+
+<script>
+    $(document).on('ready', function() {
+    $(".magazine").slick({
+        dots: false,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+        });
+    });
 </script>
 
 </body>
