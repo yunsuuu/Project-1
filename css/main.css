@@ -1,4 +1,10 @@
-/* all */
+/* 폰트 */
+@font-face {
+    font-family: 'journalist';
+    src: url(../font/Thefaceshop/THEFACESHOP+INKLIPQUID.ttf);
+}
+
+/* 공통태그 */
 body,
 h1,
 h2,
@@ -7,12 +13,19 @@ h4,
 h5,
 p,
 ul,
-li {
+li,
+span,
+a {
     margin: 0;
     padding: 0;
 }
+ul,
+li {
+    list-style: none;
+}
 body {
-    font-family: 'notosanskr';
+    font-family: 'Noto Sans KR';
+    height: 7000px;
 }
 .desktop_inlineBlock {
     display: none !important;
@@ -32,20 +45,48 @@ a {
 a:visited {
     color: #000;
 }
-
-/* all section title */
+.viewMore {
+    margin: 0 auto;
+    width: 80px;
+    margin-top: 24px;
+}
+.viewMore p {
+    border: 1px solid #838383;
+    padding: 6px;
+    opacity: .5;
+    color: #838383;
+    font-size: 8px;
+    text-align: center;
+}
+.title-line {
+    border-top: 4px solid #dd0606;
+}
+.name-line {
+    border-left: 2px solid #dd0606;
+    display: inline-block;
+    height: 12px;
+    margin: 0 4px;
+}
+/* 모바일햄버거바 */
+#mobileSidebar {
+    display: block;
+    width: 24px;
+    height: 18px;
+    background-image: url("../images/mobile-sidebar.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* 섹션별 타이틀 */
 h3 {
-    /* border: 2px solid blue; */
-    width: 90%;
-    margin: 50px auto 20px;
+    /* width: 90%; */
+    margin: 60px auto 0px;
     font-family: 'Montserrat';
-    font-size: 40px;
+    font-size: 34px;
     text-align: center;
 }
 
-/* header */
+/* 내비게이션바 */
 #navbar1 {
-    /* border: 3px solid red; */
     width: 90%;
     height: 60px;
     margin: auto;
@@ -54,14 +95,6 @@ h3 {
     background-color: #fff;
     align-items: center;
     justify-content: space-between;
-}
-#mobileSidebar {
-    display: block;
-    width: 24px;
-    height: 18px;
-    background-image: url("../images/mobile-sidebar.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 #logo {
     display: block;
@@ -73,10 +106,8 @@ h3 {
     /* 백그라운드 사이즈가 잘리지 않고 다 보이게 */
     background-repeat: no-repeat;
 }
-
-/* search filter design */
+/* 검색창 */
 #search-wrap {
-    /* border: 3px solid reds; */
     border-bottom: 2px solid #000;
 }
 .search-content {
@@ -93,7 +124,6 @@ h3 {
     /* text-indent: 5px; - 들여쓰기 */
 }
 .search-content button {
-    /* border: 3px solid red; */
     padding: 12px;
     margin-bottom: 4px;
     background-position: center;
@@ -110,30 +140,24 @@ h3 {
 .search-content ::placeholder {
     color: #000;
 }
-
-/* utility icon */
+/* 상단메뉴아이콘 */
 .li-inline-icon {
     padding: 0;
     margin: 0;
 }
 .li-inline-icon li {
-    /* border: 3px solid blueviolet; */
     display: inline-block;
 }
 .li-inline-icon img {
-    /* border: 3px solid green; */
     width: 20px;
 }
-
 #navbar2 {
-    /* border: 3px solid red; */
     width: 100%;
     height: 50px;
     margin: auto;
     background-color:#000;
 }
 #navbar2 .li-inline {
-    /* border: 3px solid green; */
     display: flex;
     width: 60%;
     height: 50px;
@@ -142,16 +166,13 @@ h3 {
     align-items: center;
 }
 #navbar2 .li-inline li {
-    /* border: 3px solid blue; */
-    list-style: none;
     font-weight: 600;
     font-size: 16px;
 }
 #navbar2 .li-inline .menuLink {
-    /* border: 3px solid green; */
     text-decoration: none;
 }
-/* 메뉴 하이퍼링크 초기화 */
+/* 하이퍼링크 초기화 */
 #navbar2 .li-inline .menuLink:visited {
     color: #fff;
 }
@@ -159,16 +180,14 @@ h3 {
     color: #dd0606;
 }
 
-/* section1 - main visual */
+/* 메인배너 */
 .container .item {
-    /* border: 3px solid blue; */
     position: relative;
 }
 .container .item img {
     width: 100%;
 }
 .container .item .textSet {
-    /* border: 3px solid orange; */
     width: 80%;
     position: absolute;
     bottom: 10%;
@@ -179,19 +198,17 @@ h3 {
 .textSet .category {
     display: inline-block;
     width: fit-content;
-    padding: 2px 6px;
+    padding: 3px 5px 5px;
     margin: 0 auto;
     font-size: 12px;
-    font-weight: 600;
     text-align: center;
     background-color: #DD0606;
     color: white;
     border-radius: 4px;
 }
-.textSet .mainTitle {
-    /* border: 2px solid blue; */
+.textSet h4 {
     font-size: 32px;
-    padding: 12px 0;
+    padding: 6px 0;
     word-break: keep-all;
 }
 .textSet .subTitle {
@@ -199,29 +216,22 @@ h3 {
     font-weight: 500;
 }
 
-/* section2 - magazine */
+/* 매거진 */
 #magazine-gnb {
-    /* border: 2px solid red; */
     width: 90%;
-    margin: 0 auto;
+    margin: 14px auto ;
 }
 .magazine-li-inline {
-    /* border: 2px solid blue; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
-/* 처음 들어갔을 때 전체 -> 다른 카테고리 클릭시 색상 변하고 전체는 색상 빠지게 */
 .magazine-li-inline li {
-    /* border: 3px solid orange; */
-    list-style: none;
     font-weight: 600;
     font-size: 16px;
     text-align: center;
 }
 .menuLink2 {
-    /* border: 3px solid green; */
     text-decoration: none;
 }
 /* 메뉴 하이퍼링크 초기화 */
@@ -232,116 +242,364 @@ h3 {
     color: #dd0606;
 }
 
-/* magazine content */
+/* 매거진콘텐츠 */
 .magazineContent {
-    border: 2px solid red;
+    max-width: 100%;
+    margin: 0 auto
 }
-.magazineContent img {
-    border: 2px solid blue;
+.magazineSlider {
+    position: relative;
+    }
+.magazineSlider img {
     width: 100%;
 }
-.magazine .magazineContent {
-position: relative;
+.magazineSlider .textSet {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 0px 14px 12px;
 }
-.magazineContent .textSet {
-/* border: 2px solid red; */
-position: absolute;
-bottom: 5%;
-left: 5%;
+.magazineSlider .gradient {
+    background: -webkit-linear-gradient(top, transparent, rgb(0, 0, 0));
+}
+.magazineSlider .textSet .magazineTitle {
+    font-size: 20px;
+    padding: 0;
+    margin-top: 2px;
+}
+.magazineSlider .textSet .magazineDate {
+    font-size: 12px;
+    margin-left: 5px;
+}
+.banner_ad {
+    margin: 60px auto 0;
+    width: 100%;
+    display: inline-block;
+}
+.banner_ad .sticky_banner {
+    float: left;
+    width: 100%;
+}
+.banner_ad .sticky_banner img {
+    width: 100%;
+    display: block;
 }
 
+/* 저널리스트 */
+.title-wrap { 
+    margin-bottom: 20px;
+}
+.small-title {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.journalist-wrap {
+    /* border: 2px solid blue; */
+    overflow: hidden;
+    margin: 0 auto;
+}
+.journalist-article {
+    /* border: 2px solid red; */
+    display: flex;
+    width: 90%;
+    box-sizing: border-box;
+    margin: 10px auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEEEEE;
+}
+.journalist-article .journalist-img {
+    display: inline-block;
+}
+.journalist-article .journalist-img img {
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+.journalist-article .journalist-text {
+    /* border: 2px solid red; */
+    display: inline-block;
+    margin: 10px 0 0 0;
+    width: 160px;
+    text-align: center;
+}
+.journalist-article .journalist-text p {
+    /* border: 2px solid blue; */
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.journalist-article .journalist-text h4 {
+    /* border: 2px solid green; */
+    font-family: 'journalist';
+    font-size: 42px;
+    font-weight: 300;
+    display: inline-block;
+    width: 90%;
+    word-break: keep-all;
+    margin-top: 6px;
+}
+.journalist-article:hover {
+    color: #fff;
+    background-color: #dd0606;
+}
+.journalist-article:hover .name-line{
+    border-color: #fff;
+}
 
+/* 아카이브 */
+.background_black {
+    background-color: #000;
+    height: 450px;
+    margin-top: 60px;
+}
+.archiveContainer {
+    position: relative;
+    top: 50px;
+}
+.archiveContent {
+    /* border: 2px solid red; */
+    width: 95%;
+    margin: 0 auto;
+}
+.archiveSlider {
+    /* border: 2px solid blue; */
+    box-sizing: border-box;
+}
+.archiveSlider .archive-magazine-img {
+    /* border: 2px solid red; */
+    width: 90%;
+}
+.archiveSlider .archive-magazine-img img {
+    /* border: 2px solid red; */
+    width: 100%;
+    display: block;
+}
+.magazineNumber {
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+}
 
-
-/* ------------ 아이폰 + 아이패드 + 데스크탑 ------------ */
-
-    /* 375 iPhone 6/7/8 */
-    @media screen and (min-width: 375px) {
-        .mobile_inlineBlock {
-            display: inline-block;
-        }
+/* 375 iPhone 6/7/8 */
+@media screen and (min-width: 375px) {
+    .mobile_inlineBlock {
+        display: inline-block;
     }
+}
 
-    /* 414 iPhone 6/7/8 Plus */
-    @media screen and (min-width: 414px) {
+/* 414 iPhone 6/7/8 Plus */
+@media screen and (min-width: 414px) {
 
+}
+
+/* 768 - 아이패드 */
+@media screen and (min-width: 768px) {
+    .title-ipad-size {
+        font-size: 44px;
+        margin: 70px auto 0;
     }
-
-    /* 768 - 아이패드 */
-    @media screen and (min-width: 768px) {
-        .container .item .textSet {
-            bottom: 8%;
-        }
-        .container .item .textSet .category {
-            font-size: 24px;
-        }
-        .textSet .mainTitle {
-            font-size: 50px;
-        }
-        .magazine h3 {
-            font-size: 50px;
-        }
-        #magazine-gnb {
-            /* border: 2px solid red; */
-            width: 600px;
-            margin: 0 auto;
-        }
-        .magazine-li-inline li {
-            font-size: 20px;
-        }
+    .container .item .textSet {
+        bottom: 8%;
     }
-
-    /* 1024 - 아이패드pro - 1024부터 데스크탑ver*/
-    @media screen and (min-width: 1024px) {
-        .desktop_inlineBlock {
-            display: inline-block !important;
-        }
-        .mobile_inlineBlock {
-            display: none !important;
-        }
-        #navbar2 .li-inline li {
-            font-size: 16px;
-        }
-        .container .item .textSet {
-            /* border: 3px solid orange; */
-            width: 320px;
-            height: fit-content;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #000;
-        }
-        .container .item .textSet .category {
-            font-size: 14px;
-        }
-        .textSet .mainTitle {
-            font-size: 35px;
-            word-break: keep-all;
-        }
-        .textSet .subTitle {
-            display: block;
-            font-size: 16px;
-            font-weight: 500;
-        }
+    .textSet .category {
+        padding: 3px 5px 5px;
+        font-size: 16px;
     }
-
-    /* 1440 - 태블릿 가로ver(데스크탑이랑 동일)*/
-    @media screen and (min-width: 1440px) {
-        .container .item .textSet {
-            /* border: 3px solid orange; */
-            width: 340px;
-        }
-        .container .item .textSet .category {
-            font-size: 14px;
-        }
-        .textSet .mainTitle {
-            font-size: 40px;
-            word-break: keep-all;
-        }
-        .textSet .subTitle {
-            display: block;
-            font-size: 18px;
-            font-weight: 500;
-        }
+    .textSet .mainTitle {
+        font-size: 50px;
     }
+    .magazine-li-inline li {
+        font-size: 20px;
+    }
+    .magazineSlider .textSet {
+        padding: 0px 18px 20px;
+    }
+    .magazineSlider .textSet .magazineTitle {
+        font-size: 28px;
+        padding: 0;
+        margin-top: 2px;
+    }
+    .magazineSlider .textSet .magazineDate {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+    .journalist-article .journalist-text {
+        width: 50%;
+    }
+    .journalist-article .journalist-text p {
+        font-size: 14px;
+    }
+    .journalist-article .journalist-text h4 {
+        font-size: 52px;
+    }
+}
+
+/* 1024 - 아이패드pro - 1024부터 데스크탑ver*/
+@media screen and (min-width: 1024px) {
+    .desktop_inlineBlock {
+        display: inline-block !important;
+    }
+    .mobile_inlineBlock {
+        display: none !important;
+    }
+    #navbar2 .li-inline li {
+        font-size: 16px;
+    }
+    .container .item .textSet {
+        width: 320px;
+        height: fit-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000;
+    }
+    .textSet .mainTitle {
+        font-size: 35px;
+        word-break: keep-all;
+    }
+    .textSet .subTitle {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .textSet .category {
+        padding: 3px 5px 5px;
+        font-size: 12px;
+    }
+    #magazine-gnb {
+        width: 600px;
+        margin: 18px auto;
+    }
+    .magazineContent {
+        max-width: 80%;
+    }
+    .magazineSlider img {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .magazineSlider .textSet {
+        width: 80%;
+        left: 10%;
+        padding: 0px 20px 20px;
+    }
+    .magazineSlider .textSet .magazineTitle {
+        font-size: 28px;
+        padding: 0;
+        margin-top: 2px;
+    }
+    .magazineSlider .textSet .magazineDate {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+    .banner_ad {
+        margin-top: 70px;
+    }
+    .banner_ad .sticky_banner {
+        float: left;
+        width: 50%;
+    }
+    .banner_ad .sticky_banner img {
+        width: 100%;
+    }
+    .journalist-wrap {
+        /* border: 2px solid blue; */
+        width: 90%;
+        max-width: 1800px;
+        display: grid;
+        gap: 35px;
+        grid-template-columns: repeat(auto-fill, minmax(40%, auto));
+        margin: 30px auto;
+    }
+    .journalist-article {
+        /* border: 2px solid red; */
+        display: flex;
+        width: 100%;
+        padding: 10px 10px 0 10px;
+        margin: 0 auto;
+    }
+    .journalist-article .journalist-img img {
+        width: 185px;
+        height: 185px;
+        display: block;
+    }
+}
+
+/* 1440 - 태블릿 가로ver(데스크탑이랑 동일)*/
+@media screen and (min-width: 1440px) {
+    .container .item .textSet {
+        width: 340px;
+    }
+    .textSet .mainTitle {
+        font-size: 40px;
+        word-break: keep-all;
+    }
+    .textSet .subTitle {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .textSet .category {
+        padding: 3px 5px 5px;
+        font-size: 16px;
+    }
+    .magazineSlider .textSet .magazineTitle {
+        font-size: 32px;
+        padding: 0;
+        margin-top: 2px;
+    }
+    .magazineSlider .textSet .magazineDate {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+    .journalist-article .journalist-img img {
+        width: 250px;
+        height: 250px;
+        display: block;
+    }
+    .journalist-article .journalist-text {
+        /* border: 2px solid blue; */
+        width: 40%;
+    }
+    .journalist-article .journalist-text h4 {
+        /* border: 2px solid green; */
+        font-family: 'journalist';
+        font-size: 62px;
+}
+
+/* 1920 */
+@media screen and (min-width: 1920px) {
+    .textSet .mainTitle {
+        font-size: 50px;
+        word-break: keep-all;
+    }
+    .textSet .subTitle {
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .textSet .category {
+        padding: 3px 5px 5px;
+        font-size: 20px;
+    }
+    .magazineSlider .textSet {
+        /* border: 2px solid blue; */
+        padding: 0px 35px 35px;
+    }
+    .magazineSlider .textSet .magazineTitle {
+        font-size: 50px;
+        padding: 0;
+        margin-top: 2px;
+    }
+    .magazineSlider .textSet .magazineDate {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}

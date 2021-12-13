@@ -33,21 +33,19 @@
     href="https://fonts.googleapis.com/css2?family=Roboto&family=Noto+Sans+KR:wght@100;300;400;500;700;900&Montserrat:wght@600&display=swap"
     rel="stylesheet">
 
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
 <title>씨네21</title>
 
-<!-- mainCss -->
+<!-- css -->
 <link rel="stylesheet" href="./css/main.css">
-
-<!-- section1 -->
-<!-- CSS -->
 <link rel="stylesheet" type="text/css" href="./css/slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="./css/slick/slick-theme.css" />
-
-
+<link rel="stylesheet" type="text/css" href="./css/slick/slick-theme.css" /> 
 </head>
 
 <body>
-<!-- header -->
 <header>
     <nav id="navbar1">
         <h1 id="mobileSidebar" class="mobile_inlineBlock">
@@ -56,7 +54,7 @@
         <h2 id="logo">
             <a href="#"><span class="blind">씨네21</span></a>
         </h2>
-
+        <!-- 검색창 -->
         <div id="search-wrap" class="desktop_inlineBlock">
             <div class="search-content">
                 <input type="text" placeholder="2021년 상반기, 관객들이 가장 많이 본 영화 베스트 10은?" name="search">
@@ -65,7 +63,7 @@
                 </button>
             </div>
         </div>
-
+        <!-- 메뉴아이콘 -->
         <div id="utility-icon">
             <ul class="li-inline-icon">
                 <li><a href="#">
@@ -86,10 +84,15 @@
                         <img src="./images/heart.svg" alt="하트">
                     </a>
                 </li>
+                <!-- <li>
+                    <a href = "#">
+                        <i id = "example_heart" class="far fa-heart"></i>
+                    </a>
+                </li> -->
             </ul>
         </div>
     </nav>
-
+    
     <nav id="navbar2" class="desktop_inlineBlock">
         <ul class="li-inline">
             <li>
@@ -109,118 +112,353 @@
             </li>
         </ul>
     </nav>
-    </div>
 </header>
 
-<!-- section1 - main visual -->
-<!-- 이미지 높이 고정 - 태블릿용 이미지 만들기? -->
-<section class="mainVisual">
+<!-- 섹션1 메인배너 -->
+<section class="main-banner">
     <div class="container">
         <div class="item">
             <a href="#">
-            <img src="./images/mobileMainImg-1@2x.png" alt="메인기사" class="mobile_inlineBlock">
-            <img src="./images/desktopMainImg-1@2x.png" alt="메인기사" class="desktop_inlineBlock">
-            <div class="textSet">
-                <h5 class="category">국내뉴스</h5>
-                <h4 class="mainTitle">
-                    박찬욱 감독의 카메라에는 무엇이 담겼나</h4>
-                <p class="subTitle">박찬욱 감독 첫 개인 사진전 '너의 표정'
-                </p>
-            </div>
+                <img src="./images/mobileMainImg-1@2x.png" alt="메인기사" class="mobile_inlineBlock">
+                <img src="./images/desktopMainImg-1@2x.png" alt="메인기사" class="desktop_inlineBlock">
+                <div class="textSet">
+                    <h5 class="category">국내뉴스</h5>
+                    <h4 class="mainTitle">
+                        박찬욱 감독의 카메라에는 무엇이 담겼나</h4>
+                    <p class="subTitle">박찬욱 감독 첫 개인 사진전 '너의 표정'</p>
+                </div>
             </a>
         </div>
         <div class="item">
             <a href="#">
-            <img src="./images/mobileMainImg-2@2x.png" alt="메인기사" class="mobile_inlineBlock">
-            <img src="./images/desktopMainImg-2@2x.png" alt="메인기사" class="desktop_inlineBlock">
-            <div class="textSet">
-                <h5 class="category">스페셜2</h5>
-                <h4 class="mainTitle">
-                    서울대 학생들 인터뷰하며 상우의 마음 이해했죠</h4>
-                <p class="subTitle">'오징어 게임' 상우 역 박해수</p>
-            </div>
+                <img src="./images/mobileMainImg-2@2x.png" alt="메인기사" class="mobile_inlineBlock">
+                <img src="./images/desktopMainImg-2@2x.png" alt="메인기사" class="desktop_inlineBlock">
+                <div class="textSet">
+                    <h5 class="category">스페셜2</h5>
+                    <h4 class="mainTitle">
+                        서울대 학생들 인터뷰하며 상우의 마음 이해했죠</h4>
+                    <p class="subTitle">'오징어 게임' 상우 역 박해수</p>
+                </div>
             </a>
         </div>
         <div class="item">
             <a href="#">
-            <img src="./images/mobileMainImg-3@2x.png" alt="메인기사" class="mobile_inlineBlock">
-            <img src="./images/desktopMainImg-3@2x.png" alt="메인기사" class="desktop_inlineBlock">
-            <div class="textSet">
-                <h5 class="category">스페셜2</h5>
-                <h4 class="mainTitle">착실히 쌓인 경험치로 더멀리</h4>
-                <p class="subTitle">'기적' 배우 임윤아</p>
-            </div>
+                <img src="./images/mobileMainImg-3@2x.png" alt="메인기사" class="mobile_inlineBlock">
+                <img src="./images/desktopMainImg-3@2x.png" alt="메인기사" class="desktop_inlineBlock">
+                <div class="textSet">
+                    <h5 class="category">스페셜2</h5>
+                    <h4 class="mainTitle">착실히 쌓인 경험치로 더멀리</h4>
+                    <p class="subTitle">'기적' 배우 임윤아</p>
+                </div>
             </a>
         </div>
     </div>
 </section>
 
-<!-- section2 start- magazine -->
-<section class="magazine">
-    <h3>MAGAZINE</h3>
-    <nav id="magazine-gnb">
-        <ul class="magazine-li-inline">
-            <li>
-                <a class="menuLink2" href="#" style="color: #dd0606;">전체</a>
-            </li>
-            <li>
-                <a class="menuLink2" href="#">뉴스</a>
-            </li>
-            <li>
-                <a class="menuLink2" href="#">리뷰</a>
-            </li>
-            <li>
-                <a class="menuLink2" href="#">기획</a>
-            </li>
-            <li>
-                <a class="menuLink2" href="#">평론</a>
-            </li>
-            <li>
-                <a class="menuLink2" href="#">인터뷰</a>
-            </li>
-        </ul>
-    </nav>
-
-<!-- magazine content -->
-<section class="magazine slider">
+<!-- 섹션2 매거진 -->
+<section class="main-magazine">
+    <div class="title-wrap">
+        <h3 class="title-ipad-size">
+            <span class="title-line">M</span>AGAZINE
+        </h3>
+        <nav id="magazine-gnb">
+            <ul class="magazine-li-inline">
+                <li>
+                    <a class="menuLink2" href="#" style="color: #dd0606;">전체</a>
+                </li>
+                <li>
+                    <a class="menuLink2" href="#">뉴스</a>
+                </li>
+                <li>
+                    <a class="menuLink2" href="#">리뷰</a>
+                </li>
+                <li>
+                    <a class="menuLink2" href="#">기획</a>
+                </li>
+                <li>
+                    <a class="menuLink2" href="#">평론</a>
+                </li>
+                <li>
+                    <a class="menuLink2" href="#">인터뷰</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <div class="magazineContent">
-      <a href="#">
-          <img src="./images/magazine-img-4@2x.png" alt="매거진 기사">
-      </a>
-      <div class="textSet">
-      <h5 class="category">커버스타</h5>
-      <h4 class="magazineTilte">'최선의 삶' 방민아, 두려움을 내려놓고</h4>
-      <p class="magazineDate">2021-09-01 · 남선우 기자</p>
-      </div>
-  </div>
-  <div class="magazineContent">
-      <a href="#"><img src="./images/magazine-img-1@2x.png" alt="매거진 기사">
-      </a>
-      <div class="textSet">
-      <h5 class="category">커버스타</h5>
-      <h4 class="magazineTilte">이것이 우리의 최선</h4>
-      <p class="magazineDate">2021-09-01 · 씨네21 취재팀</p>
-      </div>
-  </div>
-  <div class="magazineContent">
-      <a href="#"><img src="./images/magazine-img-2@2x.png" alt="매거진 기사">
-      </a>
-      <div class="textSet">
-      <h5 class="category">커버스타</h5>
-      <h4 class="magazineTilte">'최선의 삶' 심달기, 솔직한 욕망을 찾아서</h4>
-      <p class="magazineDate">2021-09-01 · 송경원 기자</p>
-      </div>
-  </div>
-  <div class="magazineContent">
-      <a href="#"><img src="./images/magazine-img-3@2x.png" alt="매거진 기사">
-      </a>
-      <div class="textSet">
-      <h5 class="category">커버스타</h5>
-      <h4 class="magazineTilte">'최선의 삶' 한성민…‘나는 강하다’는 주문</h4>
-      <p class="magazineDate">2021-09-01 · 조현나 기자</p>
-      </div>
-  </div>
-  </section>
+        <div class="magazineSlider">
+            <a href="#">
+                <img src="./images/magazine-img-0@2x.png" alt="기사">
+            </a>
+            <div class="textSet gradient">
+                <h5 class="category">커버스타</h5>
+                <h4 class="magazineTitle">'최선의 삶' 방민아, 두려움을 내려놓고</h4>
+                <p class="magazineDate">2021-09-01 · 남선우 기자</p>
+            </div>
+        </div>
+        <div class="magazineSlider">
+            <a href="#">
+                <img src="./images/magazine-img-1@2x.png" alt="기사">
+            </a>
+            <div class="textSet gradient">
+                <h5 class="category">커버스타</h5>
+                <h4 class="magazineTitle">이것이 우리의 최선</h4>
+                <p class="magazineDate">2021-09-01 · 씨네21 취재팀</p>
+            </div>
+        </div>
+        <div class="magazineSlider">
+            <a href="#">
+                <img src="./images/magazine-img-2@2x.png" alt="기사">
+            </a>
+            <div class="textSet gradient">
+                <h5 class="category">커버스타</h5>
+                <h4 class="magazineTitle">'최선의 삶' 심달기, 솔직한 욕망을 찾아서</h4>
+                <p class="magazineDate">2021-09-01 · 송경원 기자</p>
+            </div>
+        </div>
+        <div class="magazineSlider">
+            <a href="#">
+                <img src="./images/magazine-img-3@2x.png" alt="기사">
+            </a>
+            <div class="textSet gradient">
+                <h5 class="category">커버스타</h5>
+                <h4 class="magazineTitle">'최선의 삶' 한성민…‘나는 강하다’는 주문</h4>
+                <p class="magazineDate">2021-09-01 · 조현나 기자</p>
+            </div>
+        </div>
+    </div>
+    <div class="viewMore">
+        <a href="#">
+            <p>VIEW MORE ></p>
+        </a>
+    </div>
+</section>
+
+<!-- 배너광고 -->
+<section>
+    <ul class="banner_ad">
+        <li class="sticky_banner">
+            <a href="#">
+                <img src="images/recruite@2x.png" alt="리쿠르트">
+            </a>
+        </li>
+        <li class="sticky_banner">
+            <a href="#">
+                <img src="/images/20_star@2x.png" alt="영화평점">
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- 섹션3 저널리스트 -->
+<section class="main-journalist">
+    <div class="title-wrap">
+        <h3 class="title-ipad-size">
+            JOU<span class="title-line">R</span>NALIST
+        </h3>
+        <p class="small-title">좋아하는 필자 집중탐구 시간</p>
+    </div>
+    <div class="journalist-wrap">
+        <a href="#">
+            <div class="journalist-article">
+                <div class="journalist-img">
+                    <img src="/images/editor_1@2x.png" alt="기자사진">
+                </div>
+                <div class="journalist-text">
+                    <p>씨네21 취재1팀
+                        <span class="name-line"></span>
+                        김소미 기자
+                    </p>
+                    <h4>뭉근히 녹여내다</h4>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="journalist-article">
+                <div class="journalist-img">
+                    <img src="/images/editor_2@2x.png" alt="기자사진">
+                </div>
+                <div class="journalist-text">
+                    <p>씨네21 취재2팀
+                        <span class="name-line"></span>
+                        김혜리 기자
+                    </p>
+                    <h4>순간의 영화들</h4>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="journalist-article">
+                <div class="journalist-img">
+                    <img src="/images/editor_3@2x.png" alt="기자사진">
+                </div>
+                <div class="journalist-text">
+                    <p>씨네21 취재1팀
+                        <span class="name-line"></span>
+                        송경원 기자
+                    </p>
+                    <h4>영화의 언어</h4>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="journalist-article">
+                <div class="journalist-img">
+                    <img src="/images/editor_4@2x.png" alt="기자사진">
+                </div>
+                <div class="journalist-text">
+                    <p>씨네21 취재2팀
+                        <span class="name-line"></span>
+                        배동미 기자
+                    </p>
+                    <h4>냉정과 열정 사이</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="viewMore">
+        <a href="#">
+            <p>VIEW MORE ></p>
+        </a>
+    </div>
+</section>
+
+<!-- 섹션4 아카이브 -->
+<section class="main-archive">
+    <div class="background_black">
+        <div class="archiveContainer">
+            <div class="title-wrap" style="color: #fff;">
+                <h3 class="title-ipad-size" style="margin: 0;">
+                    ARCHI<span class="title-line">V</span>E
+                </h3>
+                <p class="small-title">
+                    매주 새롭게 찾아오는 다양한 문화 소식
+                </p>
+            </div>
+            <div class="archiveContent">
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1313.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1313</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1314.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1314</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1315.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1315</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1316.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1316</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1317.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1317</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1318.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1318</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1319.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1319</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1320.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1320</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1321.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1321</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1322.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1322</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1323.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1323</p>
+                    </div>
+                </div>
+                <div class="archiveSlider">
+                    <div class="archive-magazine-img">
+                        <a href="#">
+                            <img src="./images/magazine/1324.jpg" alt="잡지">
+                        </a>
+                    </div>
+                    <div class="textSet">
+                        <p class="magazineNumber">No. 1324</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     
 <!-- JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -235,19 +473,50 @@
             infinite: true,
             speed: 300,
             });
-        });
+            
+        $(".magazineContent").slick({
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 1,
+            infinite: true,
+            speed: 300,
+            });
+
+        $(".archiveContent").slick({
+            centerMode: false,
+            centerPadding: '0px',
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: false,
+            dots: true,
+            arrows: false,
+            speed: 300,
+            });
+    });
 </script>
 
 <script>
-    $(document).on('ready', function() {
-    $(".magazine").slick({
-        dots: false,
-        infinite: true,
-        centerMode: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-        });
-    });
+    // function redHeart(x) {
+    //     // x.style.backgroundColor = "red";
+    //     $("#example_heart").removeClass("far fa-heart");
+    //     $("#example_heart").addClass("fas fa-heart");
+    // }
+
+    // $("#example_heart").on("mouseover", function() {
+    //     $("#example_heart").removeClass("far fa-heart");
+    //     $("#example_heart").addClass("fas fa-heart");
+    // });
+
+    // $("#example_heart").on("mouseout", function() {
+    //     $("#example_heart").removeClass("fas fa-heart");
+    //     $("#example_heart").addClass("far fa-heart");
+    // });
+
+    // function normalHeart(x) {
+    //     // x.style.backgroundColor = "white";
+    //     $("#example_heart").removeClass("fas fa-heart");
+    //     $("#example_heart").addClass("far fa-heart");
+    // }
 </script>
 
 </body>
