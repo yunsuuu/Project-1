@@ -25,7 +25,7 @@ li {
 }
 body {
     font-family: 'Noto Sans KR';
-    height: 7000px;
+    height: 5000px;
 }
 .desktop_inlineBlock {
     display: none !important;
@@ -46,9 +46,10 @@ a:visited {
     color: #000;
 }
 .viewMore {
+    display: block;
     margin: 0 auto;
+    padding: 30px;
     width: 80px;
-    margin-top: 24px;
 }
 .viewMore p {
     border: 1px solid #838383;
@@ -83,6 +84,15 @@ h3 {
     font-family: 'Montserrat';
     font-size: 34px;
     text-align: center;
+}
+.title-wrap { 
+    margin-bottom: 20px;
+}
+.small-title {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 /* 내비게이션바 */
@@ -289,15 +299,6 @@ h3 {
 }
 
 /* 저널리스트 */
-.title-wrap { 
-    margin-bottom: 20px;
-}
-.small-title {
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-}
 .journalist-wrap {
     /* border: 2px solid blue; */
     overflow: hidden;
@@ -311,7 +312,7 @@ h3 {
     margin: 10px auto;
     align-items: center;
     justify-content: center;
-    background-color: #EEEEEE;
+    background-color: #f0efeb;
 }
 .journalist-article .journalist-img {
     display: inline-block;
@@ -354,37 +355,70 @@ h3 {
 }
 
 /* 아카이브 */
-.background_black {
+.main-archive .background_black {
     background-color: #000;
-    height: 450px;
+    margin-top: 60px;
+    padding-top: 50px;
+    /* padding-bottom: 10%; */
+}
+.main-archive .background_black .viewMore {
     margin-top: 60px;
 }
-.archiveContainer {
-    position: relative;
-    top: 50px;
-}
-.archiveContent {
-    /* border: 2px solid red; */
-    width: 95%;
-    margin: 0 auto;
-}
-.archiveSlider {
-    /* border: 2px solid blue; */
-    box-sizing: border-box;
-}
-.archiveSlider .archive-magazine-img {
+.archiveContainer .archiveContent {
     /* border: 2px solid red; */
     width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+    /* padding: 10px; */
+}
+.archiveSlider .archive-magazine-img {
+    /* border: 2px solid orange; */
+    width: 100%;
 }
 .archiveSlider .archive-magazine-img img {
-    /* border: 2px solid red; */
+    /* border: 2px solid green; */
     width: 100%;
     display: block;
 }
-.magazineNumber {
+.archiveSlider .magazineNumber {
     color: #fff;
     padding: 10px;
     font-size: 14px;
+    display: inline-block;
+}
+.archive-overlay {
+    border: 2px solid #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    padding: 0;
+    background-color: yellow;
+    opacity: .2;
+    /* transition: all .7s; */
+}
+.archive-overlay .btn_info_box {
+    /* border: 2px solid #fff; */
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translate3d(0, -50%, 0);
+}
+.btn_info_box .btn_info_st {
+    border: 1px solid rgba(255,255,255,.6);
+    display: block;
+    padding: 6px;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
 }
 
 /* 375 iPhone 6/7/8 */
@@ -438,6 +472,12 @@ h3 {
     }
     .journalist-article .journalist-text h4 {
         font-size: 52px;
+    }
+    .main-archive .background_black {
+        padding-top: 70px;
+    }
+    .main-archive .background_black .viewMore {
+        margin-top: 70px;
     }
 }
 

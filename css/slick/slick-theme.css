@@ -13,6 +13,7 @@
 /* Arrows */
 .slick-prev,
 .slick-next {
+    border: 2px solid blue;
     line-height: 0;
     position: absolute;
     top: 50%;
@@ -46,16 +47,15 @@
 }
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
-    opacity: .25;
+    /* opacity: .25; */
 }
 
 /* 좌우 화살표 */
 .slick-prev:before,
 .slick-next:before {
+    /* border: 2px solid red; */
     font-family: 'slick';
     line-height: 1;
-    /* opacity: .75; */
-    /* color: #000; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     display: block;
@@ -111,19 +111,15 @@
     text-align: center;
 }
 .archiveContent .slick-dots {
-    /* border: 2px solid blue; */
+    /* border: 2px solid #fff; */
     position: absolute;
-    bottom: -18%;
-    display: flex;
-    width: 80%;
-    /* height: 0.1vw; */
-    height: 6spx;
-    left: 10%;
+    bottom: -50px;
+    display: block;
+    width: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
     text-align: center;
-    background-color: transparent;
 }
 .slick-dots li {
     /* border: 2px solid blue; */
@@ -135,37 +131,12 @@
     padding: 0;
     cursor: pointer;
 }
-.archiveContent .slick-dots li {
-    border: 2px solid orange;
-    position: relative;
-    display: inline-block;
-    flex: auto;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    background-color: #fff;
-}
 .slick-dots li button {
     font-size: 0;
     line-height: 0;
     display: block;
     width: 12px;
     height: 4px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
-}
-.archiveContent .slick-dots li button {
-    border: 2psx solid blue;
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 12px;
-    height: 2px;
     padding: 5px;
     cursor: pointer;
     color: transparent;
@@ -197,30 +168,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.archiveContent .slick-dots li button:before {
-    /* border: 2px solid red; */
-    /* font-family: 'slick'; */
-    /* font-size: 12px; */
-    line-height: 20px;
-    position: absolute;
-    /* top: 0; */
-    /* left: 0; */
-    width: 100%;
-    content: '';
-    text-align: center;
-    color: #D2D2D2;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 .slick-dots li.slick-active button:before {
     color: #dd0606;
 }
-.archiveSlider .slick-dots li.slick-active button:before {
-    color: #dd0606;
-}
 
-/* 375 iPhone 6/7/8 */
-@media screen and (min-width: 375px) {
+/* 414 iPhone 6/7/8 Plus */
+@media screen and (min-width: 414px) {
 
 }
 /* 768 iPad */
@@ -242,14 +195,40 @@
         width: 120px;
         height: 120px;
     }
+    .archiveContent
+    .slick-prev {
+        /* border: 2px solid red; */
+        width: 60px;
+        height: 60px;
+    }
+    .archiveContent
+    .slick-next {
+        /* border: 2px solid blue; */
+        width: 60px;
+        height: 60px;
+    }
     .slick-next {
         margin-top: -50px;
+    }
+    .archiveContent
+    .slick-next {
+        margin-top: -20px;
     }
     .slick-prev {
         left: -4%;
     }
     [dir='rtl'] .slick-prev {
         right: -4%;
+        left: auto;
+    }
+    .archiveContent
+    .slick-prev {
+        left: -5%;
+    }
+    [dir='rtl'] 
+    .archiveContent
+    .slick-prev {
+        right: -5%;
         left: auto;
     }
     .slick-next {
@@ -259,12 +238,44 @@
         right: auto;
         left: -4%;
     }
+    .archiveContent
+    .slick-next {
+        right: -5%;
+    }
+    [dir='rtl'] 
+    .archiveContent
+    .slick-next {
+        right: auto;
+        left: -5%;
+    }
 }
 /* 1440 */
 @media screen and (min-width: 1440px) {
-
+    .archiveContent
+    .slick-prev {
+        /* border: 2px solid red; */
+        width: 80px;
+        height: 80px;
+    }
+    .archiveContent
+    .slick-next {
+        /* border: 2px solid blue; */
+        width: 80px;
+        height: 80px;
+    }
 }
 /* 1920 */
 @media screen and (min-width: 1920px) {
-
+    .archiveContent
+    .slick-prev {
+        /* border: 2px solid red; */
+        width: 100px;
+        height: 100px;
+    }
+    .archiveContent
+    .slick-next {
+        /* border: 2px solid blue; */
+        width: 100px;
+        height: 100px;
+    }
 }
