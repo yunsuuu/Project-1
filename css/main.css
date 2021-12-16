@@ -18,6 +18,7 @@ span,
 a {
     margin: 0;
     padding: 0;
+    letter-spacing: -0.8px;
 }
 ul,
 li {
@@ -25,7 +26,7 @@ li {
 }
 body {
     font-family: 'Noto Sans KR';
-    height: 5000px;
+    /* height: 5000px; */
 }
 .desktop_inlineBlock {
     display: none !important;
@@ -34,6 +35,9 @@ body {
     display: none;
 }
 .blind {
+    display: none;
+}
+.archive-overlay {
     display: none;
 }
 .textSet .subTitle {
@@ -48,11 +52,12 @@ a:visited {
 .viewMore {
     display: block;
     margin: 0 auto;
-    padding: 30px;
-    width: 80px;
+    padding: 20px;
+    width: 100px;
 }
 .viewMore p {
     border: 1px solid #838383;
+    border-radius: 30px;
     padding: 6px;
     opacity: .5;
     color: #838383;
@@ -208,7 +213,7 @@ h3 {
 .textSet .category {
     display: inline-block;
     width: fit-content;
-    padding: 3px 5px 5px;
+    padding: 2px 12px 4px;
     margin: 0 auto;
     font-size: 12px;
     text-align: center;
@@ -285,7 +290,7 @@ h3 {
     margin-left: 5px;
 }
 .banner_ad {
-    margin: 60px auto 0;
+    margin: 30px auto;
     width: 100%;
     display: inline-block;
 }
@@ -312,7 +317,7 @@ h3 {
     margin: 10px auto;
     align-items: center;
     justify-content: center;
-    background-color: #f0efeb;
+    background-color: #F7F7F7;
 }
 .journalist-article .journalist-img {
     display: inline-block;
@@ -359,7 +364,7 @@ h3 {
     background-color: #000;
     margin-top: 60px;
     padding-top: 50px;
-    /* padding-bottom: 10%; */
+    padding-bottom: 20px;
 }
 .main-archive .background_black .viewMore {
     margin-top: 60px;
@@ -387,39 +392,118 @@ h3 {
     display: inline-block;
 }
 .archive-overlay {
-    border: 2px solid #fff;
+    /* border: 2px solid #fff; */
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     bottom: 0;
-    left: 0px;
+    left: 0;
     right: 0;
     padding: 0;
-    background-color: yellow;
-    opacity: .2;
-    /* transition: all .7s; */
+    background-color: rgba(0, 0, 0, .9);
+    opacity: 0;
+    transition: all .2s;
 }
 .archive-overlay .btn_info_box {
-    /* border: 2px solid #fff; */
+    /* border: 1px solid #fff; */
     position: absolute;
     top: 50%;
     bottom: auto;
     left: 0;
     right: 0;
     width: 100%;
+    margin: 0 auto;
     transform: translate3d(0, -50%, 0);
 }
 .btn_info_box .btn_info_st {
-    border: 1px solid rgba(255,255,255,.6);
     display: block;
-    padding: 6px;
+    padding: 8px;
     width: 100px;
-    height: 30px;
+    height: 28px;
+    line-height: 28px;
     margin: 0 auto;
     text-align: center;
     color: #fff;
+    border: 1px solid #fff;
 }
+.archive-overlay:hover {
+    opacity: .8;
+}
+.btn_info_st:hover {
+    background-color: #dd0606;
+}
+
+/* 푸터 */
+.footer-contianer {
+    /* border: 2px solid red; */
+    position: relative;
+    padding: 30px;
+}
+.subscription-form {
+    /* border: 2px solid burlywood; */
+    margin-bottom: 50px;
+}
+.subscription-form p {
+    /* border: 2px solid red; */
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px auto;
+    color: #000;
+}
+.subscription-form .form-submit {
+    display: block;
+    width: 300px;
+    /* max-width: 30%; */
+    height: 30px;
+    line-height: 14px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #dd0606;
+    border-style: none;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer-link,
+.footer-sns {
+    margin: 20px 0;
+}
+.footer-link > ul > li a {
+    color: #000;
+}
+.footer-link > ul > li + li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #9B9B9B;
+    width: 9px;
+    height: 10px;
+    top: 10px;
+    left: 0;
+}
+.footer-link > ul > li, 
+.footer-info > ul > li,
+.footer-sns > ul > li {
+    /* border: 1px solid red; */
+    display: inline-block;
+    position: relative;
+    padding: 6px;
+    font-size: 12px;
+    color: #9B9B9B;
+}
+.footer-sns img {
+    width: 30px;
+    height: 30px;
+}
+.footer-copyright {
+    color: #9B9B9B;
+    font-size: 12px;
+    padding: 6px;
+}
+
 
 /* 375 iPhone 6/7/8 */
 @media screen and (min-width: 375px) {
@@ -443,7 +527,6 @@ h3 {
         bottom: 8%;
     }
     .textSet .category {
-        padding: 3px 5px 5px;
         font-size: 16px;
     }
     .textSet .mainTitle {
@@ -479,6 +562,10 @@ h3 {
     .main-archive .background_black .viewMore {
         margin-top: 70px;
     }
+    .archiveContent  .slick-list {
+        /* border: 2px solid blue; */
+        margin-top: 28px;
+    }
 }
 
 /* 1024 - 아이패드pro - 1024부터 데스크탑ver*/
@@ -488,6 +575,9 @@ h3 {
     }
     .mobile_inlineBlock {
         display: none !important;
+    }
+    .archive-overlay {
+        display: block !important;
     }
     #navbar2 .li-inline li {
         font-size: 16px;
@@ -511,7 +601,6 @@ h3 {
         font-weight: 500;
     }
     .textSet .category {
-        padding: 3px 5px 5px;
         font-size: 12px;
     }
     #magazine-gnb {
@@ -540,7 +629,7 @@ h3 {
         margin-left: 5px;
     }
     .banner_ad {
-        margin-top: 70px;
+        margin: 60px auto;
     }
     .banner_ad .sticky_banner {
         float: left;
@@ -570,6 +659,40 @@ h3 {
         height: 185px;
         display: block;
     }
+    .footer-contianer {
+        /* border: 2px solid red; */
+        position: relative;
+        padding: 30px 60px;
+    }
+    .footer-contianer .subscription-form {
+        display: inline-block;
+        float: right;
+        margin-top: 20px;
+    }
+    .subscription-form .form-submit {
+        width: 340px;
+    }
+    .subscription-form p {
+        font-size: 16px;
+    }
+    .footer-link > ul > li, 
+    .footer-info > ul > li,
+    .footer-sns > ul > li {
+        font-size: 16px;
+    }
+    .footer-contianer .footer-sns {
+        display: inline-block;
+        float: right;
+        margin-top: -120px;
+    }
+    .footer-sns img {
+        width: 40px;
+        height: 40px;
+    }
+    .footer-copyright {
+        font-size: 16px;
+        margin-top: 20px;
+    }
 }
 
 /* 1440 - 태블릿 가로ver(데스크탑이랑 동일)*/
@@ -585,10 +708,6 @@ h3 {
         display: block;
         font-size: 18px;
         font-weight: 500;
-    }
-    .textSet .category {
-        padding: 3px 5px 5px;
-        font-size: 16px;
     }
     .magazineSlider .textSet .magazineTitle {
         font-size: 32px;
@@ -624,10 +743,6 @@ h3 {
         display: block;
         font-size: 20px;
         font-weight: 500;
-    }
-    .textSet .category {
-        padding: 3px 5px 5px;
-        font-size: 20px;
     }
     .magazineSlider .textSet {
         /* border: 2px solid blue; */
