@@ -26,7 +26,7 @@ li {
 }
 body {
     font-family: 'Noto Sans KR';
-    /* height: 5000px; */
+    height: 5000px;
 }
 .desktop_inlineBlock {
     display: none !important;
@@ -50,9 +50,10 @@ a:visited {
     color: #000;
 }
 .viewMore {
+    /* border: 2px solid blue; */
     display: block;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     width: 100px;
 }
 .viewMore p {
@@ -61,7 +62,7 @@ a:visited {
     padding: 6px;
     opacity: .5;
     color: #838383;
-    font-size: 8px;
+    font-size: 12px;
     text-align: center;
 }
 .title-line {
@@ -73,15 +74,39 @@ a:visited {
     height: 12px;
     margin: 0 4px;
 }
-/* 모바일햄버거바 */
-#mobileSidebar {
+.btn_info_box {
+    /* border: 1px solid #fff; */
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    transform: translate3d(0, -50%, 0);
+}
+.btn_info_box .btn_info_st {
     display: block;
-    width: 24px;
+    padding: 8px;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #fff;
+}
+#mobileSidebar {
+    /* border: 2px solid blue; */
+    display: block;
+    width: 22px;
     height: 18px;
     background-image: url("../images/mobile-sidebar.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
+
 /* 섹션별 타이틀 */
 h3 {
     /* width: 90%; */
@@ -102,7 +127,7 @@ h3 {
 
 /* 내비게이션바 */
 #navbar1 {
-    width: 90%;
+    width: 92%;
     height: 60px;
     margin: auto;
     display: flex;
@@ -115,7 +140,7 @@ h3 {
     display: block;
     width: 80px;
     height: 30px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     background-image: url("../images/logo_black.svg");
     background-size: contain;
     /* 백그라운드 사이즈가 잘리지 않고 다 보이게 */
@@ -184,9 +209,6 @@ h3 {
     font-weight: 600;
     font-size: 16px;
 }
-#navbar2 .li-inline .menuLink {
-    text-decoration: none;
-}
 /* 하이퍼링크 초기화 */
 #navbar2 .li-inline .menuLink:visited {
     color: #fff;
@@ -233,7 +255,8 @@ h3 {
 
 /* 매거진 */
 #magazine-gnb {
-    width: 90%;
+    /* border: 2px solid red; */
+    width: 85%;
     margin: 14px auto ;
 }
 .magazine-li-inline {
@@ -246,12 +269,9 @@ h3 {
     font-size: 16px;
     text-align: center;
 }
-.menuLink2 {
-    text-decoration: none;
-}
 /* 메뉴 하이퍼링크 초기화 */
 .menuLink2:visited {
-    color: #9B9B9B;
+    color: #838383;
 }
 .menuLink2:hover {
     color: #dd0606;
@@ -259,36 +279,39 @@ h3 {
 
 /* 매거진콘텐츠 */
 .magazineContent {
-    max-width: 100%;
-    margin: 0 auto
+    /* border: 2px solid red; */
+    margin: 0 auto;
 }
 .magazineSlider {
     position: relative;
-    }
+}
 .magazineSlider img {
     width: 100%;
 }
 .magazineSlider .textSet {
+    /* border: 2px solid blue; */
     position: absolute;
-    width: 100%;
-    box-sizing: border-box;
-    bottom: 0;
-    left: 0;
     color: #fff;
-    padding: 0px 14px 12px;
+    padding: 0px 20px 12px;
 }
 .magazineSlider .gradient {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
     background: -webkit-linear-gradient(top, transparent, rgb(0, 0, 0));
 }
 .magazineSlider .textSet .magazineTitle {
     font-size: 20px;
     padding: 0;
-    margin-top: 2px;
 }
 .magazineSlider .textSet .magazineDate {
     font-size: 12px;
-    margin-left: 5px;
+    padding: 0 4px;
 }
+
+/* 배너광고 */
 .banner_ad {
     margin: 30px auto;
     width: 100%;
@@ -308,30 +331,32 @@ h3 {
     /* border: 2px solid blue; */
     overflow: hidden;
     margin: 0 auto;
+    width: 85%;
 }
 .journalist-article {
     /* border: 2px solid red; */
     display: flex;
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
     margin: 10px auto;
     align-items: center;
-    justify-content: center;
-    background-color: #F7F7F7;
+    justify-content: space-around;
+    background-color: #f6f6f6;
+    padding: 12px;
 }
 .journalist-article .journalist-img {
     display: inline-block;
 }
 .journalist-article .journalist-img img {
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
     display: block;
+    border-radius: 50%;
 }
 .journalist-article .journalist-text {
     /* border: 2px solid red; */
     display: inline-block;
-    margin: 10px 0 0 0;
-    width: 160px;
+    width: 50%;
     text-align: center;
 }
 .journalist-article .journalist-text p {
@@ -369,7 +394,7 @@ h3 {
 .main-archive .background_black .viewMore {
     margin-top: 60px;
 }
-.archiveContainer .archiveContent {
+.archiveContainer .archive-wrap {
     /* border: 2px solid red; */
     width: 90%;
     max-width: 1800px;
@@ -391,7 +416,7 @@ h3 {
     font-size: 14px;
     display: inline-block;
 }
-.archive-overlay {
+.overlay {
     /* border: 2px solid #fff; */
     position: absolute;
     top: 0;
@@ -403,7 +428,7 @@ h3 {
     opacity: 0;
     transition: all .2s;
 }
-.archive-overlay .btn_info_box {
+.overlay .btn_info_box {
     /* border: 1px solid #fff; */
     position: absolute;
     top: 50%;
@@ -425,8 +450,8 @@ h3 {
     color: #fff;
     border: 1px solid #fff;
 }
-.archive-overlay:hover {
-    opacity: .8;
+.overlay:hover {
+    opacity: .9;
 }
 .btn_info_st:hover {
     background-color: #dd0606;
@@ -437,6 +462,8 @@ h3 {
     /* border: 2px solid red; */
     position: relative;
     padding: 30px;
+    /* max-width: 1800px; */
+    margin: 0 auto;
 }
 .subscription-form {
     /* border: 2px solid burlywood; */
@@ -454,7 +481,6 @@ h3 {
 .subscription-form .form-submit {
     display: block;
     width: 300px;
-    /* max-width: 30%; */
     height: 30px;
     line-height: 14px;
     padding: 10px;
@@ -504,7 +530,6 @@ h3 {
     padding: 6px;
 }
 
-
 /* 375 iPhone 6/7/8 */
 @media screen and (min-width: 375px) {
     .mobile_inlineBlock {
@@ -536,7 +561,7 @@ h3 {
         font-size: 20px;
     }
     .magazineSlider .textSet {
-        padding: 0px 18px 20px;
+        padding: 0px 30px 16px;
     }
     .magazineSlider .textSet .magazineTitle {
         font-size: 28px;
@@ -547,8 +572,8 @@ h3 {
         font-size: 16px;
         margin-left: 5px;
     }
-    .journalist-article .journalist-text {
-        width: 50%;
+    .journalist-article {
+        justify-content: center;
     }
     .journalist-article .journalist-text p {
         font-size: 14px;
@@ -562,7 +587,7 @@ h3 {
     .main-archive .background_black .viewMore {
         margin-top: 70px;
     }
-    .archiveContent  .slick-list {
+    .archive-wrap  .slick-list {
         /* border: 2px solid blue; */
         margin-top: 28px;
     }
@@ -578,6 +603,9 @@ h3 {
     }
     .archive-overlay {
         display: block !important;
+    }
+    #navbar1 {
+        width: 85%;
     }
     #navbar2 .li-inline li {
         font-size: 16px;
@@ -608,7 +636,11 @@ h3 {
         margin: 18px auto;
     }
     .magazineContent {
+        /* border: 2px solid blue; */
         max-width: 80%;
+    }
+    .magazineSlider {
+        margin-bottom: 30px;
     }
     .magazineSlider img {
         width: 80%;
@@ -649,28 +681,37 @@ h3 {
     }
     .journalist-article {
         /* border: 2px solid red; */
-        display: flex;
         width: 100%;
-        padding: 10px 10px 0 10px;
+        height: 250px;
         margin: 0 auto;
+        justify-content: space-around;
     }
     .journalist-article .journalist-img img {
-        width: 185px;
-        height: 185px;
+        width: 140px;
+        height: 140px;
         display: block;
+    }
+    .journalist-article .journalist-text {
+        /* border: 2px solid blue; */
+        width: 40%;
     }
     .footer-contianer {
         /* border: 2px solid red; */
         position: relative;
-        padding: 30px 60px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 30px;
     }
     .footer-contianer .subscription-form {
         display: inline-block;
         float: right;
-        margin-top: 20px;
+        margin-top: 14px;
     }
     .subscription-form .form-submit {
         width: 340px;
+        line-height: 12px;
+        font-size: 14px;
     }
     .subscription-form p {
         font-size: 16px;
@@ -678,12 +719,12 @@ h3 {
     .footer-link > ul > li, 
     .footer-info > ul > li,
     .footer-sns > ul > li {
-        font-size: 16px;
+        font-size: 14px;
     }
     .footer-contianer .footer-sns {
         display: inline-block;
         float: right;
-        margin-top: -120px;
+        margin-top: -94px;
     }
     .footer-sns img {
         width: 40px;
@@ -718,19 +759,23 @@ h3 {
         font-size: 16px;
         margin-left: 5px;
     }
+    .journalist-article {
+        justify-content: center;
+    }
     .journalist-article .journalist-img img {
-        width: 250px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
         display: block;
     }
     .journalist-article .journalist-text {
         /* border: 2px solid blue; */
-        width: 40%;
+        width: 60%;
     }
     .journalist-article .journalist-text h4 {
         /* border: 2px solid green; */
         font-family: 'journalist';
         font-size: 62px;
+    }
 }
 
 /* 1920 */
