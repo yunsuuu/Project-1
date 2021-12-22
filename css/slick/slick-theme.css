@@ -68,7 +68,7 @@
     background-size: contain;
 }
 .slick-prev {
-    left: -4px;
+    left: 0px;
 }
 [dir='rtl'] .slick-prev {
     /* right: -6px; */
@@ -82,7 +82,7 @@
 }
 .slick-next {
     /* border: 2px solid blue; */
-    right: -4px;
+    right: 0px;
     margin-top: -20px;
     transform: scale(-1);
 }

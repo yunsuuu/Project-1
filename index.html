@@ -46,7 +46,7 @@
 </head>
 
 <body>
-<header>
+<header class>
     <nav id="navbar1">
         <h1 id="mobileSidebar" class="mobile_inlineBlock">
             <a href="#">
@@ -101,23 +101,80 @@
     </nav>
     
     <nav id="navbar2" class="desktop_inlineBlock">
-        <ul class="li-inline">
-            <li>
-                <a class="menuLink" href="#">매거진</a>
-            </li>
-            <li>
-                <a class="menuLink" href="#">정기구독</a>
-            </li>
-            <li>
-                <a class="menuLink" href="#">아카이브</a>
-            </li>
-            <li>
-                <a class="menuLink" href="#">이벤트</a>
-            </li>
-            <li>
-                <a class="menuLink" href="#">영화인 리쿠르트</a>
-            </li>
-        </ul>
+        <div class="gnb-area">
+            <ul class="gnb-list">
+                <li>
+                    <a class="menuLink" href="#">매거진
+                    </a>
+                    <ul class="sub-gnb">
+                        <li >
+                            <a href="#">전체</a>
+                        </li>
+                        <li >
+                            <a href="#">뉴스</a>
+                        </li>
+                        <li >
+                            <a href="#">리뷰</a>
+                        </li>
+                        <li >
+                            <a href="#">기획</a>
+                        </li>
+                        <li >
+                            <a href="#">평론</a>
+                        </li>
+                        <li >
+                            <a href="#">인터뷰</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="menuLink" href="#">정기구독</a>
+                    <ul class="sub-gnb">
+                        <li >
+                            <a href="#">구독혜택</a>
+                        </li>
+                        <li >
+                            <a href="#">구독인증</a>
+                        </li>
+                        <li >
+                            <a href="#">정기구독 신청</a>
+                        </li>
+                        <li >
+                            <a href="#">구독정보 관리</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="menuLink" href="#">아카이브</a>
+                    <ul class="sub-gnb">
+                        <li >
+                            <a href="#">호별 보기</a>
+                        </li>
+                        <li >
+                            <a href="#">필자 살펴보기</a>
+                        </li>
+                        <li >
+                            <a href="#">기자 섹션별 보기</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="menuLink" href="#">이벤트</a>
+                    <ul class="sub-gnb">
+                        <li >
+                            <a href="#">이벤트</a>
+                        </li>
+                        <li >
+                            <a href="#">당첨자 발표</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="menuLink" href="#">영화인 리쿠르트</a>
+                </li>
+            </ul>
+        </div>
+        <div class="subBg"></div>
     </nav>
 </header>
 
@@ -721,7 +778,7 @@
             centerPadding: '0px',
             slidesToShow: 1,
             infinite: true,
-            speed: 1000,
+            speed: 800,
             fade: true,
             });
 
@@ -746,6 +803,24 @@
 				    },
 			    ]
         });
+    });
+</script>
+
+<script>
+    $(".gnb-area").mouseenter(function(){
+        $(this).stop().animate({
+            height:360
+        },200);
+        $(".subBg").stop().animate({
+            height:320
+        },200);
+    }).mouseleave(function(){
+        $(this).stop().animate({
+            height:50
+        },300);
+        $(".subBg").stop().animate({
+            height:0
+        },300);
     });
 </script>
 
